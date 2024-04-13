@@ -1,0 +1,1 @@
+/home/apj2125/kaldi-trunk/egs/wsj/s5/path.sh
