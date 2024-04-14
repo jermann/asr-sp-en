@@ -10,8 +10,8 @@
 data_en=$HOME/cv_corpus_v17_en
 data_sp=$HOME/cv_corpus_v17_sp
 
-data_url_en=https://storage.googleapis.com/common-voice-prod-prod-datasets/cv-corpus-17.0-2024-03-15/cv-corpus-17.0-2024-03-15-en.tar.gz
-data_url_sp=https://storage.googleapis.com/common-voice-prod-prod-datasets/cv-corpus-17.0-2024-03-15/cv-corpus-17.0-2024-03-15-es.tar.gz
+data_url_en=https://storage.googleapis.com/common-voice-prod-prod-datasets/cv-corpus-17.0-2024-03-15/cv-corpus-17.0-2024-03-15-en.tar.gz?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gke-prod%40moz-fx-common-voice-prod.iam.gserviceaccount.com%2F20240414%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240414T202053Z&X-Goog-Expires=43200&X-Goog-SignedHeaders=host&X-Goog-Signature=c22e9539795b048d9745c20b77c40f19555b6e3f13e93c414af630c47b3f8327293ecc01df249bec2bb506a355fcb32e57179bc2d88b0bec4045d9c97d97cc3cafc9ff34a8ea860f5cf718d4f6f2c0604b6dc154053efd61de1d11f69b90842b11c6dabf0d47f7933905e534dc73f48a6b5cde586770804c0dfc786f930638f010143154fffb2c6f1b4ae7e397ee0e962582bc23775a0833c1817c9184b753f988191cba799c3ef8663e08eef9249ed4d893d809548700bc45a1c84d78e5f31f0e05d9436de7e88d100f3480322804be94fea33e181ea40602d565a6f3a83d334b6bb9cc7746ef06f4900d5efc9fc1f1c3b298bf579df47b809d342668d17b76
+data_url_sp=https://storage.googleapis.com/common-voice-prod-prod-datasets/cv-corpus-17.0-2024-03-15/cv-corpus-17.0-2024-03-15-es.tar.gz?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gke-prod%40moz-fx-common-voice-prod.iam.gserviceaccount.com%2F20240414%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240414T203246Z&X-Goog-Expires=43200&X-Goog-SignedHeaders=host&X-Goog-Signature=a24434f660a27e60eda612eb959bad4420fa02a5f69cb1a25b9b55ef419df094acf54f4a9d3d0bdaa5ed96af67ec0a390c0bafe64c83d440fa291df9b11969ec0023345f78b42639f0cec0013bfa81a29732da13c87a182f28c25bf18a0388d92cd3a2f7b215d60354053dfe1e1550eaed300896696e859ca84c9b11724eb372541d7477d098e63109c4cc77182f22cc15de73ac3a680e380851b64b93e1c68d29ed1c92074a49fb772cf9e072d20a356584220e410847b1344271e609a7ae1d0edf398ac94720e3b952e1c7721dda04fa6a87114c6a500e4a7c37331af0b26a4fa55e98827f00223e7b3175e2c6aff9ac5c070343a00ba54d2555e3e1173ff2
 
 . ./cmd.sh
 . ./path.sh
