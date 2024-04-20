@@ -20,7 +20,29 @@
 # Project by Alexander Jermann (apj2125)
 #
 
-. ./cmd.sh
-. ./path.sh
+. ./path.sh || exit 1
+. ./cmd.sh || exit 1
 
 set -e -o pipefail -u
+
+nj=8
+decode_nj=8    # note: should not be >38 which is the number of speakers in the dev set
+               # after applying --seconds-per-spk-max 180.  We decode with 4 threads, so
+               # this will be too many jobs if you're using run.pl.
+stage=0
+train_rnnlm=false
+train_lm=false
+
+. utils/parse_options.sh || exit 1
+[[ $# -ge 1 ]] && { echo "Wrong arguments!"; exit 1; }
+
+echo
+echo "===== PREPARING ACOUSTIC DATA ====="
+echo
+# Needs to be prepared by hand (or using self written scripts):
+#
+# spk2gender  [<speaker-id> <gender>]
+# wav.scp     [<uterranceID> <full_path_to_audio_file>]
+# text        [<uterranceID> <text_transcription>]
+# utt2spk     [<uterranceID> <speakerID>]
+# corpus.txt  [<text_transcription>]
