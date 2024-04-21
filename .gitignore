@@ -2,3 +2,5 @@
 *.mp3
 *.tsv
 *.tar
+
+s5/data/miami/bangortalk/miami/*
