@@ -50,8 +50,11 @@ echo
 # Data preparation
 if [ $stage -le 0 ]; then
   #local/download_miami_data.sh
-  python3 local/process_miami_data.py
-  python3 local/create_test_sets.py
+  # python3 local/process_miami_data.py
+  # python3 local/create_test_sets.py
+
+  local/download_miami_data_kaldi.sh
+
 fi
 
 
