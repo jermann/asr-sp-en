@@ -178,12 +178,12 @@ def make_transcript_manually(raw_utt: str) -> str:
 def gather_cs_statistics_and_words(utterance, raw_utt: str, transcript: str, file_lang: list, cur_lang: str):
     # for tagging each word, use a list of most common words
     common_spanish_words = []
-    with open("common_words/spa.txt", "r") as fin:
+    with open("data/miami/common_words/spa.txt", "r") as fin:
         for line in fin:
             common_spanish_words.append(line.strip())
 
     common_english_words = []
-    with open("common_words/eng.txt", "r") as fin:
+    with open("data/miami/common_words/eng.txt", "r") as fin:
         for line in fin:
             common_english_words.append(line.strip())
 
