@@ -302,11 +302,11 @@ def prepare_miami_data():
     all_transcripts = []
     all_translations = []
 
-    final_path = "../data/miami/all"  # output/miami/all
+    final_path = "data/miami/all"  # output/miami/all
     if not os.path.isdir(final_path):
         os.makedirs(os.path.join(final_path, "clips"))
 
-    chat_file_location = "../data/miami/original/beta"  # beta has the most up to date
+    chat_file_location = "data/miami/original/beta"  # beta has the most up to date
     for chat_file_path in tqdm(
         glob.glob(os.path.join(chat_file_location, "*.cha")), leave=True
     ):

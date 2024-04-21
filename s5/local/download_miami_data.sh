@@ -14,14 +14,14 @@
 # (Findings of the Association for Computational Linguistics: ACL 2022)
 
 # start by downloading their repository
-DIRECTORY="../data/miami/original"
+DIRECTORY="data/miami/original"
 if [ ! -d "$DIRECTORY" ]; then
     echo "cloning corpus, which contains the CHAT files with text and mappings"
-    cd ../data/miami
+    cd data/miami
     git clone https://github.com/donnekgit/miami.git
     mkdir miami/audio
     mv miami original
-    cd ../
+    cd ../../
 fi
 
 echo "downloading audio files"
