@@ -4,3 +4,4 @@
 *.tar
 
 s5/data/miami/bangortalk/miami/*
+data/miami/bangortalk_backup/*
