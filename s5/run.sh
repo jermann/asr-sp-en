@@ -46,3 +46,17 @@ echo
 # text        [<uterranceID> <text_transcription>]
 # utt2spk     [<uterranceID> <speakerID>]
 # corpus.txt  [<text_transcription>]
+
+# Data preparation
+if [ $stage -le 0 ]; then
+  local/download_miami_data.sh
+  python process_miami_data.py
+  python create_test_sets.py
+fi
+
+
+echo
+echo "===== run.sh script is finished ====="
+echo
+echo "$0: success."
+exit 0
