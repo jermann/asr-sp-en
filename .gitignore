@@ -3,5 +3,8 @@
 *.tsv
 *.tar
 
+*.txt
+*.cha
+
 s5/data/miami/bangortalk/miami/*
 data/miami/bangortalk_backup/*
