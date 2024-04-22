@@ -63,6 +63,10 @@ if [ $stage -le 0 ]; then
   # local/download_commonvoice.sh
 fi
 
+if [ $stage -le 2 ]; then
+  local/prepare_dict.sh
+fi
+
 
 echo
 echo "===== run.sh script is finished ====="
