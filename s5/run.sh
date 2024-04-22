@@ -29,7 +29,7 @@ nj=8
 decode_nj=8    # note: should not be >38 which is the number of speakers in the dev set
                # after applying --seconds-per-spk-max 180.  We decode with 4 threads, so
                # this will be too many jobs if you're using run.pl.
-stage=1
+stage=0
 train_rnnlm=false
 train_lm=false
 
@@ -56,8 +56,8 @@ if [ $stage -le 0 ]; then
   # local/download_miami_data_kaldi.sh
   # local/fix_utt2spk.sh
   # utils/utt2spk_to_spk2utt.pl data/miami/bangortalk/utt2spk > data/miami/bangortalk/spk2utt
-  cat data/miami/bangortalk/text_cs data/miami/bangortalk/text_en data/miami/bangortalk/text_spa > data/miami/bangortalk/text
-  sort -o data/miami/bangortalk/text data/miami/bangortalk/text
+  # cat data/miami/bangortalk/text_cs data/miami/bangortalk/text_en data/miami/bangortalk/text_spa > data/miami/bangortalk/text
+  # sort -o data/miami/bangortalk/text data/miami/bangortalk/text
   local/make_train_test.sh
 
   # local/download_commonvoice.sh
