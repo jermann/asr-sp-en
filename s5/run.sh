@@ -55,9 +55,9 @@ if [ $stage -le 0 ]; then
 
   # local/download_miami_data_kaldi.sh
   # local/fix_utt2spk.sh
-  # cat data/miami/bangortalk/text_cs data/miami/bangortalk/text_en data/miami/bangortalk/text_spa > data/miami/bangortalk/text
-  # sort -o data/miami/bangortalk/text data/miami/bangortalk/text
   # utils/utt2spk_to_spk2utt.pl data/miami/bangortalk/utt2spk > data/miami/bangortalk/spk2utt
+  cat data/miami/bangortalk/text_cs data/miami/bangortalk/text_en data/miami/bangortalk/text_spa > data/miami/bangortalk/text
+  sort -o data/miami/bangortalk/text data/miami/bangortalk/text
   local/make_train_test.sh
 
   # local/download_commonvoice.sh
