@@ -2,9 +2,9 @@
 # utils/copy_data_dir.sh data/miami/bangortalk data/miami/bangortalk_full
 
 # makes a random list of items
-perl utils/shuffle_list.pl data/miami/bangortalk/text > shuffled_list
-head -40506 shuffled_list > shuffled_train
-tail -4500 shuffled_list > shuffled_test
+perl utils/shuffle_list.pl data/miami/bangortalk/segments > shuffled_list
+head -35814 shuffled_list > shuffled_train
+tail -4000 shuffled_list > shuffled_test
 
 # splits data intro training and validation/testing sets
 utils/subset_data_dir.sh --utt-list shuffled_train data/miami/bangortalk data/miami/train
