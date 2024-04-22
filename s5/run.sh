@@ -29,7 +29,7 @@ nj=8
 decode_nj=8    # note: should not be >38 which is the number of speakers in the dev set
                # after applying --seconds-per-spk-max 180.  We decode with 4 threads, so
                # this will be too many jobs if you're using run.pl.
-stage=0
+stage=1
 train_rnnlm=false
 train_lm=false
 
@@ -53,9 +53,14 @@ if [ $stage -le 0 ]; then
   # python3 local/process_miami_data.py
   # python3 local/create_test_sets.py
 
-  local/download_miami_data_kaldi.sh
-  # local/download_commonvoice.sh
+  # local/download_miami_data_kaldi.sh
+  # local/fix_utt2spk.sh
+  # cat data/miami/bangortalk/text_cs data/miami/bangortalk/text_en data/miami/bangortalk/text_spa > data/miami/bangortalk/text
+  # sort -o data/miami/bangortalk/text data/miami/bangortalk/text
+  # utils/utt2spk_to_spk2utt.pl data/miami/bangortalk/utt2spk > data/miami/bangortalk/spk2utt
+  local/make_train_test.sh
 
+  # local/download_commonvoice.sh
 fi
 
 
