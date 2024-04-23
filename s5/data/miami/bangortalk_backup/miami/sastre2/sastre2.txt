@@ -1,0 +1,3 @@
+speaker   age       sex       
+AVA       78        female    
+LUI       55        male      

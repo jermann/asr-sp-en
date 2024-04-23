@@ -1,0 +1,6 @@
+speaker   age       sex       
+MEL       39        female    
+OSA       unknown   female    
+OSB       unknown   male      
+OSE       unknown   female    
+ROB       42        male      

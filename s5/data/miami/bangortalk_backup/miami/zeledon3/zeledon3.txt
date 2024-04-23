@@ -1,0 +1,4 @@
+speaker   age       sex       
+ELE       19        female    
+FEL       11        male      
+OSE       unknown   na        

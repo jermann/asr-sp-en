@@ -1,0 +1,4 @@
+speaker   age       sex       
+AAR       43        male      
+ALY       42        female    
+OSE       unknown   female    

@@ -1,0 +1,3 @@
+speaker   age       sex       
+HER       22        female    
+LAR       19        female    

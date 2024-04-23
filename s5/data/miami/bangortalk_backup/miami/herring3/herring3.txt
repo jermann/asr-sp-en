@@ -1,0 +1,4 @@
+speaker   age       sex       
+ASH       37        female    
+JAC       41        male      
+OSE       unknown   male      

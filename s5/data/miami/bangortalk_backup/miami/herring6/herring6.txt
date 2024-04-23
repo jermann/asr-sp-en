@@ -1,0 +1,3 @@
+speaker   age       sex       
+JES       43        female    
+NIC       unknown   male      

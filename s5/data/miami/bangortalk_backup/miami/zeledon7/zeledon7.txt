@@ -1,0 +1,4 @@
+speaker   age       sex       
+JAS       19        female    
+NAT       21        male      
+OSE       unknown   na        

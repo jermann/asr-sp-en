@@ -1,0 +1,4 @@
+speaker   age       sex       
+FLA       42        female    
+MAR       45        female    
+OSE       unknown   female    

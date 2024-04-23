@@ -1,0 +1,3 @@
+speaker   age       sex       
+RIC       22        male      
+SEB       unknown   male      

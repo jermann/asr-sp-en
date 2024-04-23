@@ -1,0 +1,3 @@
+speaker   age       sex       
+CON       20        male      
+GAB       23        female    

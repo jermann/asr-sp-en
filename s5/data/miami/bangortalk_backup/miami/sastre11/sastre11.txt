@@ -1,0 +1,3 @@
+speaker   age       sex       
+DIE       30        male      
+EVE       60        female    

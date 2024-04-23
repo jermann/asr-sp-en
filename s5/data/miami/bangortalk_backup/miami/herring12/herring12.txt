@@ -1,0 +1,3 @@
+speaker   age       sex       
+MIG       22        male      
+TIM       20        male      

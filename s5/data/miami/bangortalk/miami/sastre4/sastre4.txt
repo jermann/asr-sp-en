@@ -1,0 +1,3 @@
+speaker   age       sex       
+EMI       29        female    
+GIA       22        female    

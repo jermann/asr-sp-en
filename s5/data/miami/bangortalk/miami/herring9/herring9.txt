@@ -1,0 +1,3 @@
+speaker   age       sex       
+CLA       21        female    
+LUK       20        male      

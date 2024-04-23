@@ -1,0 +1,4 @@
+speaker   age       sex       
+JEN       35        female    
+JOC       35        female    
+OSE       unknown   na        

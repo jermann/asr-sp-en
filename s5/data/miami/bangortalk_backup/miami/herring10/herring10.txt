@@ -1,0 +1,4 @@
+speaker   age       sex       
+OSE       unknown   na        
+PAI       33        female    
+SAR       34        female    

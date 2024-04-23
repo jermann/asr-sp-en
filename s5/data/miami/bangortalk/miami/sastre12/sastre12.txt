@@ -1,0 +1,3 @@
+speaker   age       sex       
+MAD       48        female    
+SAM       41        female    

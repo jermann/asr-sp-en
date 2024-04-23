@@ -1,0 +1,3 @@
+speaker   age       sex       
+MIG       21        male      
+TOM       19        male      

@@ -1,0 +1,3 @@
+speaker   age       sex       
+ABE       24        male      
+IAN       30        male      
