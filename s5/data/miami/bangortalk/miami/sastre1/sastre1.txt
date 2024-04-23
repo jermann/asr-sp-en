@@ -1,0 +1,3 @@
+speaker   age       sex       
+KEV       57        male      
+SOF       44        female    

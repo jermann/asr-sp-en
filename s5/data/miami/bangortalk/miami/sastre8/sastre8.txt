@@ -1,0 +1,3 @@
+speaker   age       sex       
+AUD       63        female    
+PAO       13        female    

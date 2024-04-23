@@ -1,0 +1,3 @@
+speaker   age       sex       
+ETH       40        male      
+HEN       unknown   male      

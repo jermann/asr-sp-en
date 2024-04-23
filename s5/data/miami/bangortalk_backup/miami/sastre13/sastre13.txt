@@ -1,0 +1,4 @@
+speaker   age       sex       
+COL       25        male      
+ELI       19        female    
+OSE       unknown   female    

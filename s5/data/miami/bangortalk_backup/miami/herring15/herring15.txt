@@ -1,0 +1,3 @@
+speaker   age       sex       
+BRA       unknown   male      
+EVN       21        male      

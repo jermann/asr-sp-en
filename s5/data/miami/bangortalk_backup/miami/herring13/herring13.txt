@@ -1,0 +1,4 @@
+speaker   age       sex       
+LEA       unknown   female    
+OSE       unknown   na        
+VAN       32        female    

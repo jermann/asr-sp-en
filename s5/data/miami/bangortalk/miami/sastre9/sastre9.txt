@@ -1,0 +1,3 @@
+speaker   age       sex       
+KAY       48        female    
+VAL       60        female    

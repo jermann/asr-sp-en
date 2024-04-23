@@ -1,0 +1,4 @@
+speaker   age       sex       
+ARI       18        female    
+AVE       19        female    
+OSE       unknown   na        

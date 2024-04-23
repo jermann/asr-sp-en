@@ -1,0 +1,4 @@
+speaker   age       sex       
+LIL       36        female    
+OSE       unknown   na        
+VIC       66        female    

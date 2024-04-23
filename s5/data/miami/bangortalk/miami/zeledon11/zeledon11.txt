@@ -1,0 +1,4 @@
+speaker   age       sex       
+ANT       21        male      
+OSE       unknown   na        
+SEA       25        male      

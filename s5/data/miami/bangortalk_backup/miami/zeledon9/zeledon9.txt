@@ -1,0 +1,4 @@
+speaker   age       sex       
+CHA       12        female    
+GIL       unknown   female    
+OSE       unknown   female    

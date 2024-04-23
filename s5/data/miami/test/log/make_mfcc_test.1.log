@@ -1,0 +1,1027 @@
+# compute-mfcc-feats --write-utt2dur=ark,t:data/miami/test/log/utt2dur.1 --verbose=2 --config=conf/mfcc.conf scp,p:data/miami/test/log/wav_test.1.scp ark:- | copy-feats --write-num-frames=ark,t:data/miami/test/log/utt2num_frames.1 --compress=true ark:- ark,scp:/home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/test/data/raw_mfcc_test.1.ark,/home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/test/data/raw_mfcc_test.1.scp 
+# Started at Tue Apr 23 18:36:08 UTC 2024
+#
+compute-mfcc-feats --write-utt2dur=ark,t:data/miami/test/log/utt2dur.1 --verbose=2 --config=conf/mfcc.conf scp,p:data/miami/test/log/wav_test.1.scp ark:- 
+copy-feats --write-num-frames=ark,t:data/miami/test/log/utt2num_frames.1 --compress=true ark:- ark,scp:/home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/test/data/raw_mfcc_test.1.ark,/home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/test/data/raw_mfcc_test.1.scp 
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0035
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0041
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0047
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0075
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0088
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0093
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0098
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0099
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0103
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 10 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0107
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0110
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0115
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0120
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0162
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0183
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0189
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0202
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0211
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0221
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 20 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0230
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0259
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0278
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0349
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0367
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0368
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0387
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0395
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0472
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0524
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 30 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0595
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0602
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0609
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0615
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0639
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0702
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0708
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0749
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0774
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0779
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 40 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0784
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0796
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0803
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0807
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0824
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AAR-sastre6-0827
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0018
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0023
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0032
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0034
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 50 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0070
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0106
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0123
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0164
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0180
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0215
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0242
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0250
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0272
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0277
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 60 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0284
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0297
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0304
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0313
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0332
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0377
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0439
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0483
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABE-herring16-0509
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0001
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 70 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0013
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0019
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0055
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0068
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0102
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0148
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0152
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0162
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0168
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0182
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 80 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0183
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0193
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0217
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0230
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0248
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0262
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0268
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0271
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0313
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0337
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 90 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0344
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0348
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0356
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0381
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0412
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0456
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0510
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0523
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0580
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0584
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 100 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0650
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0668
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0672
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0712
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0722
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0735
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0759
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0779
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0799
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0806
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 110 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0836
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0841
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0843
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0862
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0868
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0895
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0902
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0904
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0912
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0934
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 120 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0979
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-0981
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-1005
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-1040
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-1046
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-1067
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-1087
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ABI-zeledon6-1108
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0006
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0179
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 130 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0180
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0185
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0204
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0206
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0225
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0249
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0260
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0280
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0287
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0291
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 140 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0344
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0433
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0437
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0442
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0459
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0466
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0467
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0469
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0543
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0546
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 150 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0577
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0579
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ALY-sastre6-0689
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0098
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0223
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0249
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0410
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0446
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0778
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0779
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 160 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0782
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0804
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0806
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0818
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0844
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-0874
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-1044
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AME-zeledon1-1084
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0015.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0022.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0026.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0033.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0150.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0151.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0174.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0204.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0219.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0223.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0262.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0296.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0303.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0405.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0508.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0551.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0558.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0574.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0762.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0764.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0765.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0772.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0779.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0789.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0790.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0793.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0799.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0810.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:EnsureObjectLoaded():util/kaldi-table-inl.h:310) Failed to open file /home/apj2125/kaldi-trunk/egs/asr-sp-en/s5/data/miami/bangortalk/miami/zeledon11/split/ANT-zeledon11-0859.wav
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0019
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0028
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 170 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0044
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0051
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0052
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0061
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0072
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0086
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0094
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0145
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0170
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0226
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 180 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0279
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0473
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0474
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0481
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0482
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0494
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0500
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0514
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0517
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0544
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 190 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0602
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0611
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0620
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0629
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0631
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0658
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0664
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0685
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0686
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0687
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 200 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0715
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0774
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0801
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0802
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-0967
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1057
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1082
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1117
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1123
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1164
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 210 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1197
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1204
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1213
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1214
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1220
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1240
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1275
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1302
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1305
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1307
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 220 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1334
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1362
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1393
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ARI-zeledon13-1422
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0014
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0031
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0033
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0044
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0064
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0081
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 230 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0096
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0140
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0185
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0186
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0228
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0238
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0240
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0260
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0274
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0298
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 240 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0311
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0314
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0316
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0336
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0364
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0368
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0372
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0377
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0395
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0400
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 250 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0425
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0440
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0443
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0449
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0452
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0460
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0478
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0499
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0529
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0538
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 260 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0560
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0573
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0577
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0579
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0585
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0626
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0642
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0647
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0648
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0664
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 270 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0678
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0683
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0684
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0689
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0692
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0699
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0707
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0723
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0746
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0749
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 280 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0754
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0775
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0779
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0813
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0820
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key ASH-herring3-0896
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0029
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0031
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0034
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0066
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 290 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0100
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0111
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0115
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0133
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0136
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0155
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0176
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0185
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0193
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0229
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 300 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0260
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0265
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0320
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0338
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0340
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0343
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0427
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0476
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0478
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0489
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 310 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0515
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0569
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0582
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0594
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0595
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0607
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0623
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0625
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0629
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0636
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 320 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0640
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0642
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0647
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0686
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0689
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0695
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0726
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0748
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0775
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0789
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 330 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0796
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0800
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0905
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0908
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0922
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0926
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-0969
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-1014
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AUD-sastre8-1065
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0024
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 340 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0027
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0032
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0062
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0150
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0208
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0220
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0275
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0324
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0327
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0337
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 350 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0348
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0398
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0427
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0433
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0460
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0513
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0544
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0581
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0600
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0714
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 360 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0753
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0789
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0802
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0877
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0887
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0894
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0933
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0962
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0975
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-0984
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 370 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1000
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1011
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1014
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1058
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1077
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1082
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1115
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1133
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1144
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1235
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 380 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVA-sastre2-1241
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0030
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0041
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0085
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0162
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0224
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0228
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0247
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0275
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0312
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 390 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0318
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0334
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0340
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0352
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0359
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0362
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0370
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0431
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0465
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0499
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 400 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0502
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0561
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0564
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0587
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0592
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0595
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0609
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0698
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0717
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0719
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 410 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0738
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0743
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0747
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0754
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0759
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0762
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0786
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0799
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0809
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0820
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 420 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0836
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0850
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0887
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0893
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0906
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0911
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0912
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0913
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0914
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0936
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 430 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0939
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0942
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0948
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0953
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0966
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-0975
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1005
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1017
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1025
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1043
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 440 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1047
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1072
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1084
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1099
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1133
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1134
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1253
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1291
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1311
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1326
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 450 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key AVE-zeledon13-1433
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0001
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0012
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0027
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0029
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0035
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0065
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0075
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0078
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0101
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 460 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0106
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0115
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0119
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0126
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0130
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0147
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0148
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0149
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0152
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0154
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 470 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0163
+WARNING (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:122) Channel not specified but you have data with 2 channels; defaulting to zero
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key BRA-herring15-0201
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:185)  Done 471 out of 471 utterances.
+LOG (copy-feats[5.5.1126~1-8c451]:main():copy-feats.cc:143) Copied 471 feature matrices.
+# Accounting: time=27 threads=1
+# Ended (code 0) at Tue Apr 23 18:36:35 UTC 2024, elapsed time 27 seconds

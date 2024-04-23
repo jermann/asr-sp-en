@@ -1,0 +1,4 @@
+speaker   age       sex       
+JAD       19        female    
+JUL       15        female    
+OSE       unknown   na        

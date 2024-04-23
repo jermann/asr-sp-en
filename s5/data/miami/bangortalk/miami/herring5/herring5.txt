@@ -1,0 +1,3 @@
+speaker   age       sex       
+MEG       41        female    
+NOA       40        male      

@@ -1,0 +1,4 @@
+speaker   age       sex       
+LAN       37        male      
+MAS       43        male      
+OLI       52        female    

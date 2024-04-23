@@ -1,0 +1,3 @@
+speaker   age       sex       
+ABI       21        female    
+ELL       19        female    

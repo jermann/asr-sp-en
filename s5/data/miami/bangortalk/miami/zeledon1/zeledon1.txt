@@ -1,0 +1,3 @@
+speaker   age       sex       
+AME       26        female    
+CAR       21        female    

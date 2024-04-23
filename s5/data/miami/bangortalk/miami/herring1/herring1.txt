@@ -1,0 +1,4 @@
+speaker   age       sex       
+CHL       24        female    
+LAU       27        female    
+OSE       unknown   na        

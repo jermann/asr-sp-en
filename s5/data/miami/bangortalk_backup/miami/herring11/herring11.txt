@@ -1,0 +1,3 @@
+speaker   age       sex       
+CAL       64        male      
+GRA       63        female    
