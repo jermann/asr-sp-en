@@ -64,7 +64,18 @@ if [ $stage -le 0 ]; then
 fi
 
 if [ $stage -le 2 ]; then
-  local/prepare_dict.sh
+  # local/prepare_dict.sh
+fi
+
+# Train Language Model here
+
+# Feature extraction
+if [ $stage -le 6 ]; then
+  for set in test train; do
+    dir=data/$set
+    steps/make_mfcc.sh --nj 8 --cmd "$train_cmd" $dir
+    steps/compute_cmvn_stats.sh $dir
+  done
 fi
 
 
