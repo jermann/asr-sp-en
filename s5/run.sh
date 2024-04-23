@@ -74,7 +74,7 @@ fi
 if [ $stage -le 6 ]; then
   for set in test train; do
     dir=data/miami/$set
-    steps/make_mfcc.sh --nj 8 --cmd "$train_cmd" $dir
+    steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" $dir
     steps/compute_cmvn_stats.sh $dir
   done
 fi
