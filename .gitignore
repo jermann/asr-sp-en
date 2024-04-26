@@ -6,6 +6,9 @@
 *.cha
 *.ark
 
-/Users/alexander/git/asr-sp-en/s5/data/miami/bangortalk/miami/*
-data/miami/bangortalk_backup/*
-/Users/alexander/git/asr-sp-en/s5/data/local/dict/backup/*
+**/.ipynb_checkpoints/
+**/backup/
+**/bangortalk_backup/
+
+**/s5/data/miami/bangortalk/miami/*
+
