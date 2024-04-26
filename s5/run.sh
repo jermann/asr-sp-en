@@ -26,9 +26,8 @@
 set -e -o pipefail -u
 
 nj=8
-decode_nj=8    # note: should not be >38 which is the number of speakers in the dev set
-               # after applying --seconds-per-spk-max 180.  We decode with 4 threads, so
-               # this will be too many jobs if you're using run.pl.
+decode_nj=8
+
 stage=6
 train_rnnlm=false
 train_lm=false
@@ -49,6 +48,7 @@ echo
 
 # Data preparation
 if [ $stage -le 0 ]; then
+  # ====== Download Miami =======
   # local/download_miami_data.sh
   # python3 local/process_miami_data.py
   # python3 local/create_test_sets.py
@@ -61,6 +61,7 @@ if [ $stage -le 0 ]; then
   # sort -o data/miami/bangortalk/text data/miami/bangortalk/text
   local/make_train_test.sh
 
+  # ==== Set-Up Commonvoice =====
   # local/download_commonvoice.sh
 fi
 
@@ -69,6 +70,9 @@ if [ $stage -le 2 ]; then
 fi
 
 # Train Language Model here
+  # Download Twitter corpus
+  # Clean Twitter corpus
+  # Tag Twitter corpus
 
 # Feature extraction
 if [ $stage -le 6 ]; then
