@@ -6,6 +6,8 @@
 *.cha
 *.ark
 
+.DS_Store
+
 **/.ipynb_checkpoints/
 **/backup/
 **/bangortalk_backup/
