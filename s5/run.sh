@@ -28,7 +28,7 @@ set -e -o pipefail -u
 nj=8
 decode_nj=8
 
-stage=6
+stage=3
 train_rnnlm=false
 train_lm=false
 
@@ -66,13 +66,16 @@ if [ $stage -le 0 ]; then
 fi
 
 if [ $stage -le 2 ]; then
-  local/prepare_dict.sh
+  #local/prepare_dict.sh
+
+  # Check that data dirs are okay!
+  utils/validate_data_dir.sh --no-feats $dir || exit 1
 fi
 
 # make dict be ARPA
 
 if [ $stage -le 3 ]; then
-  utils/prepare_lang.sh data/local/dict_nosp \
+  utils/prepare_lang.sh data/local/dict \
     "<unk>" data/local/lang_nosp data/lang_nosp
 fi
 
@@ -82,13 +85,13 @@ fi
   # Tag Twitter corpus
 
 # Feature extraction
-if [ $stage -le 6 ]; then
-  for set in test train; do
-    dir=data/miami/$set
-    steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" $dir
-    steps/compute_cmvn_stats.sh $dir
-  done
-fi
+# if [ $stage -le 6 ]; then
+#   for set in test train; do
+#     dir=data/miami/$set
+#     steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" $dir
+#     steps/compute_cmvn_stats.sh $dir
+#   done
+# fi
 
 
 echo
