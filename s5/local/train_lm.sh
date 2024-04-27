@@ -110,7 +110,7 @@ if [ $stage -le 1 ]; then
                --limit-unk-history=true \
                ${dir}/data/text ${order} ${lm_dir}/work ${unpruned_lm_dir}
 
-  get_data_prob.py ${dir}/data/dev_test.txt ${unpruned_lm_dir} 2>&1 | grep -F '[perplexity'
+  #get_data_prob.py ${dir}/data/dev_test.txt ${unpruned_lm_dir} 2>&1 | grep -F '[perplexity'
   #[perplexity = 157.87] over 18290.0 words
 fi
 
@@ -120,7 +120,7 @@ if [ $stage -le 2 ]; then
   size=10000000
   prune_lm_dir.py --target-num-ngrams=$size --initial-threshold=0.02 ${unpruned_lm_dir} ${dir}/data/lm_${order}_prune_big
 
-  get_data_prob.py ${dir}/data/dev_test.txt ${dir}/data/lm_${order}_prune_big 2>&1 | grep -F '[perplexity'
+  #get_data_prob.py ${dir}/data/dev_test.txt ${dir}/data/lm_${order}_prune_big 2>&1 | grep -F '[perplexity'
 
   # current results, after adding --limit-unk-history=true:
   #get_data_prob.py: log-prob of data/local/local_lm/data/dev_test.txt given model data/local/local_lm/data/lm_4_prune_big was -5.16562818753 per word [perplexity = 175.147449465] over 18290.0 words.
@@ -137,7 +137,7 @@ if [ $stage -le 3 ]; then
   size=2000000
   prune_lm_dir.py --target-num-ngrams=$size ${dir}/data/lm_${order}_prune_big ${dir}/data/lm_${order}_prune_small
 
-  get_data_prob.py ${dir}/data/dev_test.txt ${dir}/data/lm_${order}_prune_small 2>&1 | grep -F '[perplexity'
+  #get_data_prob.py ${dir}/data/dev_test.txt ${dir}/data/lm_${order}_prune_small 2>&1 | grep -F '[perplexity'
 
   # current results, after adding --limit-unk-history=true (needed for modeling OOVs and not blowing up LG.fst):
   # get_data_prob.py: log-prob of data/local/local_lm/data/real_dev_set.txt given model data/local/local_lm/data/lm_4_prune_small was -5.29432352378 per word [perplexity = 199.202824404 over 18290.0 words.
