@@ -69,6 +69,13 @@ if [ $stage -le 2 ]; then
   local/prepare_dict.sh
 fi
 
+# make dict be ARPA
+
+if [ $stage -le 3 ]; then
+  utils/prepare_lang.sh data/local/dict_nosp \
+    "<unk>" data/local/lang_nosp data/lang_nosp
+fi
+
 # Train Language Model here
   # Download Twitter corpus
   # Clean Twitter corpus
