@@ -30,7 +30,7 @@ decode_nj=8
 
 stage=3
 train_rnnlm=false
-train_lm=false
+train_lm=true
 
 . utils/parse_options.sh || exit 1
 [[ $# -ge 1 ]] && { echo "Wrong arguments!"; exit 1; }
@@ -46,6 +46,7 @@ echo
 # utt2spk     [<uterranceID> <speakerID>]
 # corpus.txt  [<text_transcription>]
 
+# DONE
 # Data preparation
 if [ $stage -le 0 ]; then
   # ====== Download Miami =======
@@ -65,6 +66,7 @@ if [ $stage -le 0 ]; then
   # local/download_commonvoice.sh
 fi
 
+# DONE
 if [ $stage -le 2 ]; then
   #local/prepare_dict.sh
 
@@ -74,6 +76,7 @@ fi
 
 # make dict be ARPA
 
+# DONE
 if [ $stage -le 3 ]; then
   utils/prepare_lang.sh data/local/dict \
     "<unk>" data/local/lang_nosp data/lang_nosp
@@ -84,14 +87,29 @@ fi
   # Clean Twitter corpus
   # Tag Twitter corpus
 
-# Feature extraction
-# if [ $stage -le 6 ]; then
-#   for set in test train; do
-#     dir=data/miami/$set
-#     steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" $dir
-#     steps/compute_cmvn_stats.sh $dir
-#   done
+# Train LM
+if [ $stage -le 4 ]; then
+  if $train_lm; then
+    local/train_lm.sh
+  else
+    echo "ERROR: Train LM, not download"
+    #local/ted_download_lm.sh
+  fi
+fi
+
+# # Format LM
+# if [ $stage -le 5 ]; then
+#   local/format_lms.sh
 # fi
+
+# Feature extraction
+if [ $stage -le 6 ]; then
+  for set in test train; do
+    dir=data/miami/$set
+    steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" $dir
+    steps/compute_cmvn_stats.sh $dir
+  done
+fi
 
 
 echo
