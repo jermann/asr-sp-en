@@ -98,9 +98,9 @@ if [ $stage -le 4 ]; then
 fi
 
 # # Format LM
-# if [ $stage -le 5 ]; then
-#   local/format_lms.sh
-# fi
+if [ $stage -le 5 ]; then
+  local/format_lms.sh
+fi
 
 # Feature extraction
 # if [ $stage -le 6 ]; then
