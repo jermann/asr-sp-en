@@ -28,7 +28,7 @@ set -e -o pipefail -u
 nj=8
 decode_nj=8
 
-stage=3
+stage=4
 train_rnnlm=false
 train_lm=true
 
@@ -103,13 +103,13 @@ fi
 # fi
 
 # Feature extraction
-if [ $stage -le 6 ]; then
-  for set in test train; do
-    dir=data/miami/$set
-    steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" $dir
-    steps/compute_cmvn_stats.sh $dir
-  done
-fi
+# if [ $stage -le 6 ]; then
+#   for set in test train; do
+#     dir=data/miami/$set
+#     steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" $dir
+#     steps/compute_cmvn_stats.sh $dir
+#   done
+# fi
 
 
 echo
