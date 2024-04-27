@@ -117,7 +117,7 @@ fi
 if [ $stage -le 2 ]; then
   echo "$0: pruning the LM (to larger size)"
   # Using 10 million n-grams for a big LM for rescoring purposes.
-  size=10000000
+  size=60000
   prune_lm_dir.py --target-num-ngrams=$size --initial-threshold=0.02 ${unpruned_lm_dir} ${dir}/data/lm_${order}_prune_big
 
   #get_data_prob.py ${dir}/data/dev_test.txt ${dir}/data/lm_${order}_prune_big 2>&1 | grep -F '[perplexity'
@@ -134,7 +134,7 @@ if [ $stage -le 3 ]; then
   echo "$0: pruning the LM (to smaller size)"
   # Using 2 million n-grams for a smaller LM for graph building.  Prune from the
   # bigger-pruned LM, it'll be faster.
-  size=2000000
+  size=50000
   prune_lm_dir.py --target-num-ngrams=$size ${dir}/data/lm_${order}_prune_big ${dir}/data/lm_${order}_prune_small
 
   #get_data_prob.py ${dir}/data/dev_test.txt ${dir}/data/lm_${order}_prune_small 2>&1 | grep -F '[perplexity'
