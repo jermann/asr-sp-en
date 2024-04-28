@@ -28,7 +28,7 @@ set -e -o pipefail -u
 nj=8
 decode_nj=8
 
-stage=5
+stage=3
 train_rnnlm=false
 train_lm=true
 
