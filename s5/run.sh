@@ -128,14 +128,7 @@ fi
 echo
 echo "===== MAKING G.fst ====="
 echo
-#--disambig-symbol=0
-if [ $stage -le 5 ]; then
-  lang=data/lang
-  arpa2fst \
-  --read-symbol-table= data/lang/words.txt \
-  $local/tmp/lm.arpa \
-  $lang/G.fst
-fi
+arpa2fst --disambig-symbol=#0 --read-symbol-table=data/lang/words.txt data/local/tmp/lm.arpa data/lang/G.fst
 echo
 echo "===== MONO TRAINING ====="
 echo
