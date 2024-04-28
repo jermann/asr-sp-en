@@ -132,7 +132,7 @@ echo
 if [ $stage -le 5 ]; then
   lang=data/lang
   arpa2fst \
-  --read-symbol-table=$lang/words.txt \
+  --read-symbol-table= data/lang/words.txt \
   $local/tmp/lm.arpa \
   $lang/G.fst
 fi
