@@ -32,7 +32,7 @@ nj=8
 decode_nj=8
 lm_order=3
 
-stage=3
+stage=4
 train_rnnlm=false
 train_lm=true
 
@@ -104,7 +104,7 @@ echo
 echo "===== TRAINING LM ====="
 echo "===== MAKING lm.arpa ====="
 echo
-if [ $stage -le 4 ];
+if [ $stage -le 4 ]; then
   loc=`which ngram-count`;
   if [ -z $loc ]; then
           if uname -a | grep 64 >/dev/null; then
