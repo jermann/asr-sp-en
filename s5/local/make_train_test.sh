@@ -3,8 +3,8 @@
 
 # makes a random list of items
 perl utils/shuffle_list.pl data/miami/bangortalk/segments > shuffled_list
-head -35814 shuffled_list > shuffled_train
-tail -4000 shuffled_list > shuffled_test
+head -37814 shuffled_list > shuffled_train
+tail -2000 shuffled_list > shuffled_test
 
 # splits data intro training and validation/testing sets
 utils/subset_data_dir.sh --utt-list shuffled_train data/miami/bangortalk data/miami/train
