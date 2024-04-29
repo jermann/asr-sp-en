@@ -73,6 +73,7 @@ if [ $stage -le 0 ]; then
   # Verify Data directory
   utils/validate_data_dir.sh --no-feats data/miami/train || exit 1
   utils/validate_data_dir.sh --no-feats data/miami/test || exit 1
+  utils/validate_dict_dir.pl data/local/dict || exit 1
 
   # ==== Set-Up Commonvoice =====
   #local/download_commonvoice.sh
