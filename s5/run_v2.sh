@@ -39,10 +39,10 @@ train_lm=true
 . utils/parse_options.sh || exit 1
 [[ $# -ge 1 ]] && { echo "Wrong arguments!"; exit 1; }
 # delete MFCC
-rm -rf exp data/miami/train/cmvn.scp data/miami/train/feats.scp data/miami/train/split8 data/miami/train/data data/miami/test/cmvn.scp data/miami/test/feats.scp data/miami/test/split8 data/miami/test/data data/local/lang data/lang data/local/tmp data/local/dict/lexiconp.txt
-rm -rf data/local/lm/data/arpa data/local/lm/data/lm_4_prune_big data/local/lm/data/work data/local/lm/data/wordlist_4_train-2_ted-1.pocolm data/local/lm/data/wordlist data/local/lm/data/text/unigram_weights
-rm -rf data/miami/test/frame_shift data/miami/test/utt2dur data/miami/test/utt2num_frames data/miami/test/log data/miami/test/conf
-rm -rf data/miami/train/frame_shift data/miami/train/utt2dur data/miami/train/utt2num_frames data/miami/train/log data/miami/train/conf
+#rm -rf exp data/miami/train/cmvn.scp data/miami/train/feats.scp data/miami/train/split8 data/miami/train/data data/miami/test/cmvn.scp data/miami/test/feats.scp data/miami/test/split8 data/miami/test/data data/local/lang data/lang data/local/tmp data/local/dict/lexiconp.txt
+#rm -rf data/local/lm/data/arpa data/local/lm/data/lm_4_prune_big data/local/lm/data/work data/local/lm/data/wordlist_4_train-2_ted-1.pocolm data/local/lm/data/wordlist data/local/lm/data/text/unigram_weights
+#rm -rf data/miami/test/frame_shift data/miami/test/utt2dur data/miami/test/utt2num_frames data/miami/test/log data/miami/test/conf
+#rm -rf data/miami/train/frame_shift data/miami/train/utt2dur data/miami/train/utt2num_frames data/miami/train/log data/miami/train/conf
 
 ### Stages ###
 
