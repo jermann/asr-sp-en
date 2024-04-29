@@ -32,12 +32,14 @@ nj=8
 decode_nj=8
 lm_order=3
 
-stage=5
+stage=0
 train_rnnlm=false
 train_lm=true
 
 . utils/parse_options.sh || exit 1
 [[ $# -ge 1 ]] && { echo "Wrong arguments!"; exit 1; }
+# delete MFCC
+rm -rf exp data/miami/train/cmvn.scp data/miami/train/feats.scp data/miami/train/split8 data/miami/test/cmvn.scp data/miami/test/feats.scp data/miami/test/split8 data/local/lang data/lang data/local/tmp data/local/dict/lexiconp.txt
 
 
 ### Stages ###
@@ -64,7 +66,11 @@ if [ $stage -le 0 ]; then
   # utils/utt2spk_to_spk2utt.pl data/miami/bangortalk/utt2spk > data/miami/bangortalk/spk2utt
   # cat data/miami/bangortalk/text_cs data/miami/bangortalk/text_en data/miami/bangortalk/text_spa > data/miami/bangortalk/text
   # sort -o data/miami/bangortalk/text data/miami/bangortalk/text
-  local/make_train_test.sh
+  # local/make_train_test.sh
+
+  # Verify Data directory
+  utils/validate_data_dir.sh --no-feats data/miami/train || exit 1
+  utils/validate_data_dir.sh --no-feats data/miami/test || exit 1
 
   # ==== Set-Up Commonvoice =====
   #local/download_commonvoice.sh
@@ -91,10 +97,9 @@ echo
 # optional_silence.txt  [<phone>]
 # Preparing language data
 if [ $stage -le 2 ]; then
-  #local/prepare_dict.sh
-
+  # local/prepare_dict.sh
   # Check that data dirs are okay!
-  utils/validate_data_dir.sh --no-feats $dir || exit 1
+  utils/validate_dict_dir.pl data/local/dict || exit 1
 fi
 if [ $stage -le 3 ]; then
   utils/prepare_lang.sh data/local/dict "<unk>" data/local/lang data/lang
@@ -132,47 +137,25 @@ arpa2fst --disambig-symbol=#0 --read-symbol-table=data/lang/words.txt data/local
 echo
 echo "===== MONO TRAINING ====="
 echo
-steps/train_mono.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/mono  || exit 1
+steps/train_mono.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang exp/mono  || exit 1
 echo
 echo "===== MONO DECODING ====="
 echo
 utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph || exit 1
-steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/test exp/mono/decode
+steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/miami/test exp/mono/decode
 echo
 echo "===== MONO ALIGNMENT ====="
 echo
-steps/align_si.sh --nj $nj --cmd "$train_cmd" data/train data/lang exp/mono exp/mono_ali || exit 1
+steps/align_si.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang exp/mono exp/mono_ali || exit 1
 echo
 echo "===== TRI1 (first triphone pass) TRAINING ====="
 echo
-steps/train_deltas.sh --cmd "$train_cmd" 2000 11000 data/train data/lang exp/mono_ali exp/tri1 || exit 1
+steps/train_deltas.sh --cmd "$train_cmd" 2000 11000 data/miami/train data/lang exp/mono_ali exp/tri1 || exit 1
 echo
 echo "===== TRI1 (first triphone pass) DECODING ====="
 echo
 utils/mkgraph.sh data/lang exp/tri1 exp/tri1/graph || exit 1
-steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri1/graph data/test exp/tri1/decode
-echo
-echo "===== run.sh script is finished ====="
-echo
-
-# # Train LM
-# if [ $stage -le 4 ]; then
-#   if $train_lm; then
-#     local/train_lm.sh
-#   else
-#     echo "ERROR: Train LM, not download"
-#     #local/ted_download_lm.sh
-#   fi
-# fi
-#
-# # # Format LM
-# if [ $stage -le 5 ]; then
-#   local/format_lms.sh
-# fi
-
-
-
-
+steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri1/graph data/miami/test exp/tri1/decode
 echo
 echo "===== run.sh script is finished ====="
 echo
