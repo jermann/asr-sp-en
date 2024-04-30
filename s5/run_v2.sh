@@ -262,6 +262,32 @@ if [ $stage -le 18 ]; then
   local/rnnlm/average_rnnlm.sh
 fi
 
+if [ $stage -le 19 ]; then
+  # Here we rescore the lattices generated at stage 17
+  rnnlm_dir=exp/rnnlm_lstm_tdnn_a_averaged
+  lang_dir=data/lang_chain
+  ngram_order=4
+
+  # TO-DO: set the directories below
+
+  for dset in test; do
+    echo
+    echo "===== Rescore TDNN-f Lattice and Output ====="
+    echo
+    data_dir=data/${dset}_hires
+    decoding_dir=exp/chain_cleaned/tdnnf_1a/decode_${dset}
+    suffix=$(basename $rnnlm_dir)
+    output_dir=${decoding_dir}_$suffix
+
+    rnnlm/lmrescore_pruned.sh \
+      --cmd "$decode_cmd --mem 32G" \
+      --weight 0.5 --max-ngram-order $ngram_order \
+      $lang_dir $rnnlm_dir \
+      $data_dir $decoding_dir \
+      $output_dir
+  done
+fi
+
 echo
 echo "===== run.sh script is finished ====="
 echo
