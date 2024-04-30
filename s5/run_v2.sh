@@ -32,7 +32,7 @@ nj=8
 decode_nj=8
 lm_order=3
 
-stage=13
+stage=16
 train_rnnlm=false
 train_lm=true
 
@@ -240,9 +240,18 @@ if [ $stage -le 15 ]; then
   steps/lmrescore_const_arpa.sh --cmd "$decode_cmd" data/lang_refined data/lang_refined_rescore \
      data/miami/test exp/tri3/decode exp/tri3/decode_rescore
 fi
-echo
-echo "===== Run TDNN (add GPUs) ====="
-echo
+
+if [ $stage -le 16 ]; then
+  echo
+  echo "===== Clean Up Segmentation ====="
+  echo
+  local/run_cleanup_segmentation.sh
+fi
+if [ $stage -le 17 ]; then
+  echo
+  echo "===== Run TDNN (add GPUs) ====="
+  echo
+fi
 echo
 echo "===== run.sh script is finished ====="
 echo
