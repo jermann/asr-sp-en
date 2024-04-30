@@ -32,7 +32,7 @@ nj=8
 decode_nj=8
 lm_order=3
 
-stage=10
+stage=13
 train_rnnlm=false
 train_lm=true
 
@@ -205,7 +205,7 @@ if [ $stage -le 13 ]; then
   echo
   echo "===== REFINE LEXICON ====="
   echo
-  steps/get_prons.sh --cmd "$train_cmd" data/miami/train data/lang_nosp exp/tri2
+  steps/get_prons.sh --cmd "$train_cmd" data/miami/train data/lang exp/tri2
   utils/dict_dir_add_pronprobs.sh --max-normalize true data/local/dict exp/tri2/pron_counts_nowb.txt exp/tri2/sil_counts_nowb.txt \
     exp/tri2/pron_bigram_counts_nowb.txt data/local/dict_refined
 fi
