@@ -251,7 +251,17 @@ if [ $stage -le 17 ]; then
   echo
   echo "===== Run TDNN (add GPUs) ====="
   echo
+  local/chain/run_tdnn.sh
 fi
+
+if [ $stage -le 18 ]; then
+  echo
+  echo "===== Run RNN-LM TDNN ====="
+  echo
+  local/rnnlm/tuning/run_lstm_tdnn_a.sh
+  local/rnnlm/average_rnnlm.sh
+fi
+
 echo
 echo "===== run.sh script is finished ====="
 echo
