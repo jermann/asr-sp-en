@@ -32,7 +32,7 @@ nj=8
 decode_nj=8
 lm_order=3
 
-stage=0
+stage=10
 train_rnnlm=false
 train_lm=true
 
@@ -46,9 +46,6 @@ train_lm=true
 
 ### Stages ###
 
-echo
-echo "===== PREPARING ACOUSTIC DATA ====="
-echo
 # Needs to be prepared by hand (or using self written scripts):
 #
 # spk2gender  [<speaker-id> <gender>]
@@ -57,6 +54,9 @@ echo
 # utt2spk     [<uterranceID> <speakerID>]
 # corpus.txt  [<text_transcription>]
 if [ $stage -le 0 ]; then
+  echo
+  echo "===== PREPARING ACOUSTIC DATA ====="
+  echo
   # ====== Download Miami =======
   # local/download_miami_data.sh
   # python3 local/process_miami_data.py
@@ -78,10 +78,10 @@ if [ $stage -le 0 ]; then
   # ==== Set-Up Commonvoice =====
   #local/download_commonvoice.sh
 fi
-echo
-echo "===== FEATURES EXTRACTION ====="
-echo
 if [ $stage -le 1 ]; then
+  echo
+  echo "===== FEATURES EXTRACTION ====="
+  echo
   for set in test train; do
     dir=data/miami/$set
     steps/make_mfcc.sh --nj $nj --cmd "$train_cmd" $dir
@@ -89,9 +89,7 @@ if [ $stage -le 1 ]; then
   done
 fi
 
-echo
-echo "===== PREPARING LANGUAGE DATA ====="
-echo
+
 # Needs to be prepared by hand (or using self written scripts):
 #
 # lexicon.txt           [<word> <phone 1> <phone 2> ...]
@@ -100,6 +98,9 @@ echo
 # optional_silence.txt  [<phone>]
 # Preparing language data
 if [ $stage -le 2 ]; then
+  echo
+  echo "===== PREPARING LANGUAGE DATA ====="
+  echo
   # local/prepare_dict.sh
   # Check that data dirs are okay!
   utils/validate_dict_dir.pl data/local/dict || exit 1
@@ -108,11 +109,11 @@ if [ $stage -le 3 ]; then
   utils/prepare_lang.sh data/local/dict "<unk>" data/local/lang data/lang
 fi
 
-echo
-echo "===== TRAINING LM ====="
-echo "===== MAKING lm.arpa ====="
-echo
 if [ $stage -le 4 ]; then
+  echo
+  echo "===== TRAINING LM ====="
+  echo "===== MAKING lm.arpa ====="
+  echo
   loc=`which ngram-count`;
   if [ -z $loc ]; then
           if uname -a | grep 64 >/dev/null; then
@@ -133,79 +134,112 @@ if [ $stage -le 4 ]; then
   mkdir $local/tmp
   ngram-count -order $lm_order -write-vocab $local/tmp/vocab-full.txt -wbdiscount -tagged -text $local/lm/data/text/corpus.txt -lm $local/tmp/lm.arpa
 fi
-echo
-echo "===== MAKING G.fst ====="
-echo
-arpa2fst --disambig-symbol=#0 --read-symbol-table=data/lang/words.txt data/local/tmp/lm.arpa data/lang/G.fst
-echo
-echo "===== MONO TRAINING ====="
-echo
-steps/train_mono.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang exp/mono  || exit 1
-echo
-echo "===== MONO DECODING ====="
-echo
+
+if [ $stage -le 5 ]; then
+  echo
+  echo "===== MAKING G.fst ====="
+  echo
+  arpa2fst --disambig-symbol=#0 --read-symbol-table=data/lang/words.txt data/local/tmp/lm.arpa data/lang/G.fst
+fi
+
+if [ $stage -le 6 ]; then
+  echo
+  echo "===== MONO TRAINING ====="
+  echo
+  steps/train_mono.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang exp/mono  || exit 1
+fi
+# echo
+# echo "===== MONO DECODING ====="
+# echo
 #utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph || exit 1
 #steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/miami/test exp/mono/decode
-echo
-echo "===== MONO ALIGNMENT ====="
-echo
-steps/align_si.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang exp/mono exp/mono_ali || exit 1
-echo
-echo "===== TRI1 (first triphone pass) TRAINING ====="
-echo
-steps/train_deltas.sh --cmd "$train_cmd" 2000 11000 data/miami/train data/lang exp/mono_ali exp/tri1 || exit 1
-echo
-echo "===== TRI1 (first triphone pass) DECODING ====="
-echo
-utils/mkgraph.sh data/lang exp/tri1 exp/tri1/graph || exit 1
-steps/decode.sh --config conf/decode.config --nj $decode_nj --cmd "$decode_cmd" --num-threads 4 exp/tri1/graph data/miami/test exp/tri1/decode
-echo
-echo "===== TRI1 (first triphone pass) LM RESCORE ====="
-echo "Below might not work"
-echo
-steps/lmrescore_const_arpa.sh  --cmd "$decode_cmd" data/lang data/lang_rescore data/miami/test exp/tri1/decode exp/tri1/decode_rescore
-echo
-echo "===== TRI1 & TRI2 (first triphone pass) TRAIN & ALIGN ====="
-echo
-steps/align_si.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang exp/tri1 exp/tri1_ali
-steps/train_lda_mllt.sh --cmd "$train_cmd" 4000 50000 data/miami/train data/lang exp/tri1_ali exp/tri2
-echo
-echo "===== TRI1 & TRI2 (first triphone pass) DECODE ====="
-echo
-utils/mkgraph.sh data/lang exp/tri2 exp/tri2/graph
-steps/decode.sh --nj $decode_nj --cmd "$decode_cmd"  --num-threads 4 exp/tri2/graph data/miami/test exp/tri2/decode
-steps/lmrescore_const_arpa.sh  --cmd "$decode_cmd" data/lang data/lang_rescore data/miami/test exp/tri2/decode exp/tri2/decode_rescore
-echo
-echo "===== REFINE LEXICON ====="
-echo
-steps/get_prons.sh --cmd "$train_cmd" data/miami/train data/lang_nosp exp/tri2
-utils/dict_dir_add_pronprobs.sh --max-normalize true data/local/dict exp/tri2/pron_counts_nowb.txt exp/tri2/sil_counts_nowb.txt \
-  exp/tri2/pron_bigram_counts_nowb.txt data/local/dict_refined
-echo
-echo "===== TRAIN REFINED LEXICON ====="
-echo
-utils/prepare_lang.sh data/local/dict_refined "<unk>" data/local/lang_refined data/lang_refined
-cp -rT data/lang_refined data/lang_refined_rescore
-cp data/lang/G.fst data/lang_refined/
-cp data/lang_rescore/G.carpa data/lang_refined_rescore/
+if [ $stage -le 7 ]; then
+  echo
+  echo "===== MONO ALIGNMENT ====="
+  echo
+  steps/align_si.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang exp/mono exp/mono_ali || exit 1
+fi
 
-utils/mkgraph.sh data/lang_refined exp/tri2 exp/tri2/graph
+if [ $stage -le 8 ]; then
+  echo
+  echo "===== TRI1 (first triphone pass) TRAINING ====="
+  echo
+  steps/train_deltas.sh --cmd "$train_cmd" 2000 11000 data/miami/train data/lang exp/mono_ali exp/tri1 || exit 1
+fi
 
-steps/decode.sh --nj $decode_nj --cmd "$decode_cmd"  --num-threads 4 \
-  exp/tri2/graph data/miami/test exp/tri2/decode
-steps/lmrescore_const_arpa.sh --cmd "$decode_cmd" data/lang_refined data/lang_refined_rescore \
-   data/miami/test exp/tri2/decode exp/tri2/decode_rescore
-echo
-echo "===== TRAIN SAT GMM ====="
-echo
-steps/align_si.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang_refined exp/tri2 exp/tri2_ali
-steps/train_sat.sh --cmd "$train_cmd" 5000 100000 data/miami/train data/lang_refined exp/tri2_ali exp/tri3
-utils/mkgraph.sh data/lang_refined exp/tri3 exp/tri3/graph
+if [ $stage -le 9 ]; then
+  echo
+  echo "===== TRI1 (first triphone pass) DECODING ====="
+  echo
+  utils/mkgraph.sh data/lang exp/tri1 exp/tri1/graph || exit 1
+  steps/decode.sh --config conf/decode.config --nj $decode_nj --cmd "$decode_cmd" --num-threads 4 exp/tri1/graph data/miami/test exp/tri1/decode
+fi
 
-steps/decode_fmllr.sh --nj $decode_nj --cmd "$decode_cmd"  --num-threads 4 \
-  exp/tri3/graph data/miami/test exp/tri3/decode
-steps/lmrescore_const_arpa.sh --cmd "$decode_cmd" data/lang_refined data/lang_refined_rescore \
-   data/miami/test exp/tri3/decode exp/tri3/decode_rescore
+if [ $stage -le 10 ]; then
+  echo
+  echo "===== TRI1 (first triphone pass) LM RESCORE ====="
+  echo "Below might not work"
+  echo
+  utils/build_const_arpa_lm.sh data/local/tmp/lm.arpa data/lang data/lang_rescore || exit 1;
+  steps/lmrescore_const_arpa.sh  --cmd "$decode_cmd" data/lang data/lang_rescore data/miami/test exp/tri1/decode exp/tri1/decode_rescore
+fi
+
+if [ $stage -le 11 ]; then
+  echo
+  echo "===== TRI1 & TRI2 (first triphone pass) TRAIN & ALIGN ====="
+  echo
+  steps/align_si.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang exp/tri1 exp/tri1_ali
+  steps/train_lda_mllt.sh --cmd "$train_cmd" 4000 50000 data/miami/train data/lang exp/tri1_ali exp/tri2
+fi
+
+if [ $stage -le 12 ]; then
+  echo
+  echo "===== TRI1 & TRI2 (first triphone pass) DECODE ====="
+  echo
+  utils/mkgraph.sh data/lang exp/tri2 exp/tri2/graph
+  steps/decode.sh --nj $decode_nj --cmd "$decode_cmd"  --num-threads 4 exp/tri2/graph data/miami/test exp/tri2/decode
+  steps/lmrescore_const_arpa.sh  --cmd "$decode_cmd" data/lang data/lang_rescore data/miami/test exp/tri2/decode exp/tri2/decode_rescore
+fi
+
+if [ $stage -le 13 ]; then
+  echo
+  echo "===== REFINE LEXICON ====="
+  echo
+  steps/get_prons.sh --cmd "$train_cmd" data/miami/train data/lang_nosp exp/tri2
+  utils/dict_dir_add_pronprobs.sh --max-normalize true data/local/dict exp/tri2/pron_counts_nowb.txt exp/tri2/sil_counts_nowb.txt \
+    exp/tri2/pron_bigram_counts_nowb.txt data/local/dict_refined
+fi
+
+if [ $stage -le 14 ]; then
+  echo
+  echo "===== TRAIN REFINED LEXICON ====="
+  echo
+  utils/prepare_lang.sh data/local/dict_refined "<unk>" data/local/lang_refined data/lang_refined
+  cp -rT data/lang_refined data/lang_refined_rescore
+  cp data/lang/G.fst data/lang_refined/
+  cp data/lang_rescore/G.carpa data/lang_refined_rescore/
+
+  utils/mkgraph.sh data/lang_refined exp/tri2 exp/tri2/graph
+
+  steps/decode.sh --nj $decode_nj --cmd "$decode_cmd"  --num-threads 4 \
+    exp/tri2/graph data/miami/test exp/tri2/decode
+  steps/lmrescore_const_arpa.sh --cmd "$decode_cmd" data/lang_refined data/lang_refined_rescore \
+     data/miami/test exp/tri2/decode exp/tri2/decode_rescore
+fi
+
+if [ $stage -le 15 ]; then
+  echo
+  echo "===== TRAIN SAT GMM ====="
+  echo
+  steps/align_si.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang_refined exp/tri2 exp/tri2_ali
+  steps/train_sat.sh --cmd "$train_cmd" 5000 100000 data/miami/train data/lang_refined exp/tri2_ali exp/tri3
+  utils/mkgraph.sh data/lang_refined exp/tri3 exp/tri3/graph
+
+  steps/decode_fmllr.sh --nj $decode_nj --cmd "$decode_cmd"  --num-threads 4 \
+    exp/tri3/graph data/miami/test exp/tri3/decode
+  steps/lmrescore_const_arpa.sh --cmd "$decode_cmd" data/lang_refined data/lang_refined_rescore \
+     data/miami/test exp/tri3/decode exp/tri3/decode_rescore
+fi
 echo
 echo "===== Run TDNN (add GPUs) ====="
 echo
