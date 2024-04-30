@@ -180,7 +180,7 @@ if [ $stage -le 10 ]; then
   echo "===== TRI1 (first triphone pass) LM RESCORE ====="
   echo "Below might not work"
   echo
-  utils/build_const_arpa_lm.sh data/local/tmp/lm.arpa data/lang data/lang_rescore || exit 1;
+  utils/build_const_arpa_lm.sh data/local/tmp/lm.arpa.gz data/lang data/lang_rescore || exit 1;
   steps/lmrescore_const_arpa.sh  --cmd "$decode_cmd" data/lang data/lang_rescore data/miami/test exp/tri1/decode exp/tri1/decode_rescore
 fi
 
