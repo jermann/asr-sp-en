@@ -113,26 +113,39 @@ if [ $stage -le 6 ]; then
 
   # train a diagonal UBM using a subset of about a quarter of the data
   # AJ:
-  num_utts_total=$(wc -l <data/${train_set}_sp_hires/utt2spk)
+  #num_utts_total=$(wc -l <data/${train_set}_sp_hires/utt2spk)
+  num_utts_total=$(wc -l <data/${train_set}/utt2spk)
   num_utts=$[$num_utts_total/4]
-  utils/data/subset_data_dir.sh data/${train_set}_sp_hires \
-    $num_utts ${temp_data_root}/${train_set}_sp_hires_subset
+  # utils/data/subset_data_dir.sh data/${train_set}_sp_hires \
+  #   $num_utts ${temp_data_root}/${train_set}_sp_hires_subset
+
+  utils/data/subset_data_dir.sh data/${train_set} \
+    $num_utts ${temp_data_root}/${train_set}_subset
 
   echo "$0: computing a PCA transform from the hires data."
   steps/online/nnet2/get_pca_transform.sh --cmd "$train_cmd" \
     --splice-opts "--left-context=3 --right-context=3" \
     --max-utts 10000 --subsample 2 \
-    ${temp_data_root}/${train_set}_sp_hires_subset \
+    ${temp_data_root}/${train_set}_subset \
     exp/nnet3${nnet3_affix}/pca_transform
+    
+    # ${temp_data_root}/${train_set}_sp_hires_subset \
+    # exp/nnet3${nnet3_affix}/pca_transform
 
 
 
   echo "$0: training the diagonal UBM."
   # Use 512 Gaussians in the UBM.
+  # steps/online/nnet2/train_diag_ubm.sh --cmd "$train_cmd" --nj 8 \
+  #   --num-frames 700000 \
+  #   --num-threads $num_threads_ubm \
+  #   ${temp_data_root}/${train_set}_sp_hires_subset 512 \
+  #   exp/nnet3${nnet3_affix}/pca_transform exp/nnet3${nnet3_affix}/diag_ubm
+
   steps/online/nnet2/train_diag_ubm.sh --cmd "$train_cmd" --nj 8 \
     --num-frames 700000 \
     --num-threads $num_threads_ubm \
-    ${temp_data_root}/${train_set}_sp_hires_subset 512 \
+    ${temp_data_root}/${train_set}_subset 512 \
     exp/nnet3${nnet3_affix}/pca_transform exp/nnet3${nnet3_affix}/diag_ubm
 fi
 
@@ -141,10 +154,17 @@ if [ $stage -le 7 ]; then
   # can be sensitive to the amount of data. The script defaults to an iVector dimension of 100.
   echo "$0: training the iVector extractor"
 
-  steps/online/nnet2/train_ivector_extractor.sh --cmd "$train_cmd" --nj 15 \
+  # AJ: Below is original, skipping speed perturbed
+  # steps/online/nnet2/train_ivector_extractor.sh --cmd "$train_cmd" --nj 15 \
+  #   --num-threads 4 --num-processes 2 \
+  #   --online-cmvn-iextractor $online_cmvn_iextractor \
+  #   data/${train_set}_sp_hires exp/nnet3${nnet3_affix}/diag_ubm \
+  #   exp/nnet3${nnet3_affix}/extractor || exit 1;
+
+  steps/online/nnet2/train_ivector_extractor.sh --cmd "$train_cmd" --nj 8 \
     --num-threads 4 --num-processes 2 \
     --online-cmvn-iextractor $online_cmvn_iextractor \
-    data/${train_set}_sp_hires exp/nnet3${nnet3_affix}/diag_ubm \
+    data/${train_set} exp/nnet3${nnet3_affix}/diag_ubm \
     exp/nnet3${nnet3_affix}/extractor || exit 1;
 fi
 
@@ -154,8 +174,9 @@ if [ $stage -le 8 ]; then
   # valid for the non-'max2' data, the utterance list is the same.
 
   # AJ: skippins speed perturbed
-  ivectordir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
+  # ivectordir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
 
+  ivectordir=exp/nnet3${nnet3_affix}/ivectors_${train_set}
 
   if [[ $(hostname -f) == *.clsp.jhu.edu ]] && [ ! -d $ivectordir/storage ]; then
     utils/create_split_dir.pl /export/b0{5,6,7,8}/$USER/kaldi-data/ivectors/tedlium-$(date +'%m_%d_%H_%M')/s5/$ivectordir/storage $ivectordir/storage
@@ -169,20 +190,34 @@ if [ $stage -le 8 ]; then
   # handle per-utterance decoding well (the iVector starts at zero at the beginning
   # of each pseudo-speaker).
   temp_data_root=${ivectordir}
+  # AJ:
+  # utils/data/modify_speaker_info.sh --utts-per-spk-max 2 \
+  #   data/${train_set}_sp_hires ${temp_data_root}/${train_set}_sp_hires_max2
   utils/data/modify_speaker_info.sh --utts-per-spk-max 2 \
-    data/${train_set}_sp_hires ${temp_data_root}/${train_set}_sp_hires_max2
+    data/${train_set} ${temp_data_root}/${train_set}_max2
+
+    # AJ:
+  # steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj $nj \
+  #   ${temp_data_root}/${train_set}_sp_hires_max2 \
+  #   exp/nnet3${nnet3_affix}/extractor $ivectordir
 
   steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj $nj \
-    ${temp_data_root}/${train_set}_sp_hires_max2 \
+    ${temp_data_root}/${train_set}_max2 \
     exp/nnet3${nnet3_affix}/extractor $ivectordir
 
     # AJ:
   # Also extract iVectors for the test data, but in this case we don't need the speed
   # perturbation (sp) or small-segment concatenation (comb).
+  # for data in miami/test; do
+  #   steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj "$nj" \
+  #     data/${data}_hires exp/nnet3${nnet3_affix}/extractor \
+  #     exp/nnet3${nnet3_affix}/ivectors_${data}_hires
+  # done
+
   for data in miami/test; do
     steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj "$nj" \
-      data/${data}_hires exp/nnet3${nnet3_affix}/extractor \
-      exp/nnet3${nnet3_affix}/ivectors_${data}_hires
+      data/${data} exp/nnet3${nnet3_affix}/extractor \
+      exp/nnet3${nnet3_affix}/ivectors_${data}
   done
 fi
 

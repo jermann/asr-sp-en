@@ -33,7 +33,7 @@ set -e -o pipefail
 
 # First the options that are passed through to run_ivector_common.sh
 # (some of which are also used in this script directly).
-stage=17 # was 0 and then 6
+stage=0 # was 0 and then 6
 
 nj=8
 decode_nj=8
@@ -87,14 +87,17 @@ local/nnet3/run_ivector_common.sh --stage $stage \
 
 
 gmm_dir=exp/$gmm
-#ali_dir=exp/${gmm}_ali_${train_set}_sp
-ali_dir=exp/tri3_ali_cleaned
+ali_dir=exp/${gmm}_ali_${train_set}_sp
+#ali_dir=exp/tri3_ali_cleaned
 tree_dir=exp/chain${nnet3_affix}/tree_bi${tree_affix}
 lat_dir=exp/chain${nnet3_affix}/${gmm}_${train_set}_sp_lats
 dir=exp/chain${nnet3_affix}/tdnn${tdnn_affix}_sp
-train_data_dir=data/${train_set}
-lores_train_data_dir=data/${train_set}
-train_ivector_dir=exp/nnet3${nnet3_affix}/ivectors_${train_set}
+# train_data_dir=data/${train_set}
+# lores_train_data_dir=data/${train_set}
+# train_ivector_dir=exp/nnet3${nnet3_affix}/ivectors_${train_set}
+train_data_dir=data/${train_set}_sp_hires
+lores_train_data_dir=data/${train_set}_sp
+train_ivector_dir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
 
 
 for f in $gmm_dir/final.mdl $train_data_dir/feats.scp $train_ivector_dir/ivector_online.scp \
