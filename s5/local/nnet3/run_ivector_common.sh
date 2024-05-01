@@ -126,11 +126,13 @@ if [ $stage -le 6 ]; then
   steps/online/nnet2/get_pca_transform.sh --cmd "$train_cmd" \
     --splice-opts "--left-context=3 --right-context=3" \
     --max-utts 10000 --subsample 2 \
+    ${temp_data_root}/${train_set}_subset \
+    exp/nnet3${nnet3_affix}/pca_transform
+    
     # ${temp_data_root}/${train_set}_sp_hires_subset \
     # exp/nnet3${nnet3_affix}/pca_transform
 
-    ${temp_data_root}/${train_set}_subset \
-    exp/nnet3${nnet3_affix}/pca_transform
+
 
   echo "$0: training the diagonal UBM."
   # Use 512 Gaussians in the UBM.
