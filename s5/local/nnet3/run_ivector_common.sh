@@ -112,24 +112,38 @@ if [ $stage -le 6 ]; then
   temp_data_root=exp/nnet3${nnet3_affix}/diag_ubm
 
   # train a diagonal UBM using a subset of about a quarter of the data
-  num_utts_total=$(wc -l <data/${train_set}_sp_hires/utt2spk)
+  # AJ:
+  #num_utts_total=$(wc -l <data/${train_set}_sp_hires/utt2spk)
+  num_utts_total=$(wc -l <data/${train_set}/utt2spk)
   num_utts=$[$num_utts_total/4]
-  utils/data/subset_data_dir.sh data/${train_set}_sp_hires \
-    $num_utts ${temp_data_root}/${train_set}_sp_hires_subset
+  # utils/data/subset_data_dir.sh data/${train_set}_sp_hires \
+  #   $num_utts ${temp_data_root}/${train_set}_sp_hires_subset
+
+  utils/data/subset_data_dir.sh data/${train_set} \
+    $num_utts ${temp_data_root}/${train_set}_subset
 
   echo "$0: computing a PCA transform from the hires data."
   steps/online/nnet2/get_pca_transform.sh --cmd "$train_cmd" \
     --splice-opts "--left-context=3 --right-context=3" \
     --max-utts 10000 --subsample 2 \
-    ${temp_data_root}/${train_set}_sp_hires_subset \
+    # ${temp_data_root}/${train_set}_sp_hires_subset \
+    # exp/nnet3${nnet3_affix}/pca_transform
+
+    ${temp_data_root}/${train_set}_subset \
     exp/nnet3${nnet3_affix}/pca_transform
 
   echo "$0: training the diagonal UBM."
   # Use 512 Gaussians in the UBM.
+  # steps/online/nnet2/train_diag_ubm.sh --cmd "$train_cmd" --nj 8 \
+  #   --num-frames 700000 \
+  #   --num-threads $num_threads_ubm \
+  #   ${temp_data_root}/${train_set}_sp_hires_subset 512 \
+  #   exp/nnet3${nnet3_affix}/pca_transform exp/nnet3${nnet3_affix}/diag_ubm
+
   steps/online/nnet2/train_diag_ubm.sh --cmd "$train_cmd" --nj 8 \
     --num-frames 700000 \
     --num-threads $num_threads_ubm \
-    ${temp_data_root}/${train_set}_sp_hires_subset 512 \
+    ${temp_data_root}/${train_set}_subset 512 \
     exp/nnet3${nnet3_affix}/pca_transform exp/nnet3${nnet3_affix}/diag_ubm
 fi
 
