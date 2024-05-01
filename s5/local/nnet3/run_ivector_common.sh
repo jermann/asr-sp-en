@@ -8,7 +8,7 @@ set -e -o pipefail
 # of the script.  See those scripts for examples of usage.
 
 
-stage=0
+stage=7
 nj=8
 
 train_set=miami/train_cleaned   # you might set this to e.g. train.
@@ -126,7 +126,7 @@ if [ $stage -le 6 ]; then
 
   echo "$0: training the diagonal UBM."
   # Use 512 Gaussians in the UBM.
-  steps/online/nnet2/train_diag_ubm.sh --cmd "$train_cmd" --nj 30 \
+  steps/online/nnet2/train_diag_ubm.sh --cmd "$train_cmd" --nj 8 \
     --num-frames 700000 \
     --num-threads $num_threads_ubm \
     ${temp_data_root}/${train_set}_sp_hires_subset 512 \
@@ -137,10 +137,18 @@ if [ $stage -le 7 ]; then
   # Train the iVector extractor. µUse all of the speed-perturbed data since iVector extractors
   # can be sensitive to the amount of data. The script defaults to an iVector dimension of 100.
   echo "$0: training the iVector extractor"
-  steps/online/nnet2/train_ivector_extractor.sh --cmd "$train_cmd" --nj 15 \
+
+  # AJ: Below is original, skipping speed perturbed
+  # steps/online/nnet2/train_ivector_extractor.sh --cmd "$train_cmd" --nj 15 \
+  #   --num-threads 4 --num-processes 2 \
+  #   --online-cmvn-iextractor $online_cmvn_iextractor \
+  #   data/${train_set}_sp_hires exp/nnet3${nnet3_affix}/diag_ubm \
+  #   exp/nnet3${nnet3_affix}/extractor || exit 1;
+
+  steps/online/nnet2/train_ivector_extractor.sh --cmd "$train_cmd" --nj 8 \
     --num-threads 4 --num-processes 2 \
     --online-cmvn-iextractor $online_cmvn_iextractor \
-    data/${train_set}_sp_hires exp/nnet3${nnet3_affix}/diag_ubm \
+    data/${train_set} exp/nnet3${nnet3_affix}/diag_ubm \
     exp/nnet3${nnet3_affix}/extractor || exit 1;
 fi
 
@@ -148,7 +156,12 @@ if [ $stage -le 8 ]; then
   # note, we don't encode the 'max2' in the name of the ivectordir even though
   # that's the data we extract the ivectors from, as it's still going to be
   # valid for the non-'max2' data, the utterance list is the same.
-  ivectordir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
+
+  # AJ: skippins speed perturbed
+  # ivectordir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
+
+  ivectordir=exp/nnet3${nnet3_affix}/ivectors_${train_set}
+
   if [[ $(hostname -f) == *.clsp.jhu.edu ]] && [ ! -d $ivectordir/storage ]; then
     utils/create_split_dir.pl /export/b0{5,6,7,8}/$USER/kaldi-data/ivectors/tedlium-$(date +'%m_%d_%H_%M')/s5/$ivectordir/storage $ivectordir/storage
   fi
@@ -161,19 +174,34 @@ if [ $stage -le 8 ]; then
   # handle per-utterance decoding well (the iVector starts at zero at the beginning
   # of each pseudo-speaker).
   temp_data_root=${ivectordir}
+  # AJ:
+  # utils/data/modify_speaker_info.sh --utts-per-spk-max 2 \
+  #   data/${train_set}_sp_hires ${temp_data_root}/${train_set}_sp_hires_max2
   utils/data/modify_speaker_info.sh --utts-per-spk-max 2 \
-    data/${train_set}_sp_hires ${temp_data_root}/${train_set}_sp_hires_max2
+    data/${train_set} ${temp_data_root}/${train_set}_max2
+
+    # AJ:
+  # steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj $nj \
+  #   ${temp_data_root}/${train_set}_sp_hires_max2 \
+  #   exp/nnet3${nnet3_affix}/extractor $ivectordir
 
   steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj $nj \
-    ${temp_data_root}/${train_set}_sp_hires_max2 \
+    ${temp_data_root}/${train_set}_max2 \
     exp/nnet3${nnet3_affix}/extractor $ivectordir
 
+    # AJ:
   # Also extract iVectors for the test data, but in this case we don't need the speed
   # perturbation (sp) or small-segment concatenation (comb).
+  # for data in miami/test; do
+  #   steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj "$nj" \
+  #     data/${data}_hires exp/nnet3${nnet3_affix}/extractor \
+  #     exp/nnet3${nnet3_affix}/ivectors_${data}_hires
+  # done
+
   for data in miami/test; do
     steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj "$nj" \
-      data/${data}_hires exp/nnet3${nnet3_affix}/extractor \
-      exp/nnet3${nnet3_affix}/ivectors_${data}_hires
+      data/${data} exp/nnet3${nnet3_affix}/extractor \
+      exp/nnet3${nnet3_affix}/ivectors_${data}
   done
 fi
 
