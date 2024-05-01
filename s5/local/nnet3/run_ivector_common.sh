@@ -46,7 +46,6 @@ fi
 if [ $stage -le 1 ]; then
   echo "$0: preparing directory for low-resolution speed-perturbed data (for alignment)"
   utils/data/perturb_data_dir_speed_3way.sh \
-    --include_spk_prefix false \
     data/${train_set} data/${train_set}_sp
 
   for datadir in ${train_set}_sp miami/test; do
