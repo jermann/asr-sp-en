@@ -11,7 +11,7 @@ set -e -o pipefail
 stage=0
 nj=8
 
-train_set=train_cleaned   # you might set this to e.g. train.
+train_set=miami/train_cleaned   # you might set this to e.g. train.
 gmm=tri3_cleaned          # This specifies a GMM-dir from the features of the type you're training the system on;
                           # it should contain alignments for 'train_set'.
 online_cmvn_iextractor=false
