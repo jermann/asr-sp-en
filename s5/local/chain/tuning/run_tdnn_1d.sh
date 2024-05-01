@@ -55,7 +55,7 @@ online_cmvn=true
 
 # The rest are configs specific to this script.  Most of the parameters
 # are just hardcoded at this level, in the commands below.
-train_stage=-10
+train_stage=7 # was -10
 tree_affix=  # affix for tree directory, e.g. "a" or "b", in case we change the configuration.
 tdnn_affix=1d  #affix for TDNN directory, e.g. "a" or "b", in case we change the configuration.
 common_egs_dir=  # you can set this to use previously dumped egs.
