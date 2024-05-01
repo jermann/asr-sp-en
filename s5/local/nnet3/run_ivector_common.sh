@@ -45,9 +45,8 @@ fi
 
 if [ $stage -le 1 ]; then
   echo "$0: preparing directory for low-resolution speed-perturbed data (for alignment)"
-  # AJ: IMPORTANT JUST TEMP
-  #utils/data/perturb_data_dir_speed_3way.sh \
-  #  data/${train_set} data/${train_set}_sp
+  utils/data/perturb_data_dir_speed_3way.sh \
+    data/${train_set} data/${train_set}_sp
 
   for datadir in ${train_set}_sp miami/test; do
     utils/copy_data_dir.sh data/$datadir data/${datadir}_hires
