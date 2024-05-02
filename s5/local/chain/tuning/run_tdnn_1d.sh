@@ -33,7 +33,7 @@ set -e -o pipefail
 
 # First the options that are passed through to run_ivector_common.sh
 # (some of which are also used in this script directly).
-stage=16 # was 0 and then 6
+stage=20 # was 0 and then 6
 
 nj=8
 decode_nj=8
@@ -240,7 +240,7 @@ fi
 
 if [ $stage -le 20 ]; then
   rm $dir/.error 2>/dev/null || true
-  for dset in test; do
+  for dset in miami/test; do
       (
       steps/nnet3/decode.sh --num-threads 4 --nj $decode_nj --cmd "$decode_cmd" \
           --acwt 1.0 --post-decode-acwt 10.0 \
