@@ -32,7 +32,7 @@ nj=8
 decode_nj=8
 lm_order=3
 
-stage=17
+stage=18
 train_rnnlm=false
 train_lm=true
 
