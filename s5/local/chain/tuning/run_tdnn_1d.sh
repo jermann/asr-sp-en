@@ -3,43 +3,21 @@
 # 1d is like 1c, while it introduces 'apply-cmvn-online' that does
 # cmn normalization both for i-extractor and TDNN input.
 
-# local/chain/compare_wer_general.sh exp/chain_cleaned/tdnn1c_sp exp/chain_cleaned_1d/tdnn1d_sp
-# System                tdnn1c_sp tdnn1d_sp
-# WER on dev(orig)           8.32      8.50
-# WER on dev(rescored)       7.63      7.91
-# WER on test(orig)          8.44      8.39
-# WER on test(rescored)      7.84      7.88
-# Final train prob        -0.0688   -0.0698
-# Final valid prob        -0.0826   -0.0850
-# Final train prob (xent)   -0.9842   -0.9898
-# Final valid prob (xent)   -1.0976   -1.1018
-# Num-params                 9476304   9476304
-
-# steps/info/chain_dir_info.pl exp/chain_cleaned/tdnn1c_sp
-# exp/chain_cleaned/tdnn1c_sp: num-iters=228 nj=3..12 num-params=9.5M dim=40+100->3688 combine=-0.070->-0.070 (over 5) xent:train/valid[151,227,final]=(-1.19,-0.993,-0.984/-1.28,-1.10,-1.10) logprob:train/valid[151,227,final]=(-0.090,-0.070,-0.069/-0.107,-0.083,-0.083)
-
-# steps/info/chain_dir_info.pl exp/chain_cleaned_1d/tdnn1d_sp
-# exp/chain_cleaned_1d/tdnn1d_sp: num-iters=228 nj=3..12 num-params=9.5M dim=40+100->3688 combine=-0.072->-0.072 (over 5) xent:train/valid[151,227,final]=(-1.19,-0.997,-0.990/-1.29,-1.11,-1.10) logprob:train/valid[151,227,final]=(-0.090,-0.071,-0.070/-0.110,-0.085,-0.085)
-
-## how you run this (note: this assumes that the run_tdnn.sh soft link points here;
-## otherwise call it directly in its location).
-# by default, with cleanup:
-# local/chain/run_tdnn.sh
-
-# without cleanup:
-# local/chain/run_tdnn.sh  --train-set train --gmm tri3 --nnet3-affix "" &
+# Modified by: apj2125
 
 set -e -o pipefail
 
 # First the options that are passed through to run_ivector_common.sh
 # (some of which are also used in this script directly).
-stage=20 # was 0 and then 6
+stage=0 # was 0 and then 6
 
+# Changes Made: apj2125
 nj=8
 decode_nj=8
 xent_regularize=0.1
 dropout_schedule='0,0@0.20,0.5@0.50,0'
 
+# Changes Made: apj2125
 train_set=miami/train_cleaned
 gmm=tri3_cleaned  # the gmm for the target data
 num_threads_ubm=4
@@ -68,7 +46,7 @@ echo "$0 $@"  # Print the command line for logging
 . ./path.sh
 . ./utils/parse_options.sh
 
-
+# Changes Made: apj2125
 if ! cuda-compiled; then
   cat <<EOF && exit 1
 This script is intended to be used with GPUs but you have not compiled Kaldi with CUDA
@@ -86,6 +64,7 @@ local/nnet3/run_ivector_common.sh --stage $stage \
                                   --nnet3-affix "$nnet3_affix"
 
 
+# Changes Made: apj2125
 gmm_dir=exp/$gmm
 ali_dir=exp/${gmm}_ali_${train_set}_sp
 #ali_dir=exp/tri3_ali_cleaned
@@ -149,6 +128,9 @@ if [ $stage -le 16 ]; then
       --cmd "$train_cmd" 4000 ${lores_train_data_dir} data/lang_chain $ali_dir $tree_dir
 fi
 
+
+# Modified by: apj2125
+# Changed TDNN model architecture as described in paper
 if [ $stage -le 17 ]; then
   mkdir -p $dir
 
@@ -199,6 +181,7 @@ if [ $stage -le 18 ]; then
      /export/b0{5,6,7,8}/$USER/kaldi-data/egs/ami-$(date +'%m_%d_%H_%M')/s5/$dir/egs/storage $dir/egs/storage
   fi
 
+  # Modified by: apj2125
  steps/nnet3/chain/train.py --stage $train_stage \
     --cmd "$decode_cmd" \
     --feat.online-ivector-dir $train_ivector_dir \

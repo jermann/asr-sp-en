@@ -21,19 +21,32 @@ model learn switch points that are more likely to occur in natural code-switched
 speech.
 
 Required Tools:
--
+- Python3
+  Pip
+    - convertextract
 
 To Run code:
-- run.sh
+- run.sh: Run's training. Please note that this deletes files and re-starts a
+2 day process.
 - test.sh
 
 
-Documenting Contributions
+Documenting Contributions:
+Each file has a comment to denote major modifications with my UNI apj2125.
+Please note that if I only changed the folder source or destination in a
+command I am not counting this as a change.
+
 
 Modified files
 - run.sh
   - stage 0: Self-written
   - stages 1-3 & 9-17: adapted from egs/tedlium/r5_s3/run.sh
   - stages
+- local/chain/tuning/run_tdnn_1d.sh
+  - changed architecture
+  - changed training to us NVIDIA smi -c 3
+- local/nnet3/run_ivector_common_no_hires.sh
+- local/nnet3/run_ivector_common.sh
 
 Created files
+- local/append_mono.py : this file converts stereo wav files to mono wav files

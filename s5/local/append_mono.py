@@ -1,3 +1,7 @@
+# Created by: apj2125
+# Description: This file converts stereo wav files to mono wav files
+# Note: Please adjust the paths to the right location
+
 def convert_to_mono_file(input_filename):
     filename, path = input_filename.strip().split(' ')
     output_filename = filename + "_mono.wav"

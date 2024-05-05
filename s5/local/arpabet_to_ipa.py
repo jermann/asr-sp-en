@@ -1,3 +1,7 @@
+# Created by: apj2125
+# Description: This file converts stereo wav files to mono wav files
+# Note: Please adjust the paths to the right location
+
 import sys
 from convertextract.phonetics import arpabet_to_ipa
 

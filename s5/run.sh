@@ -155,11 +155,7 @@ if [ $stage -le 6 ]; then
   echo
   steps/train_mono.sh --nj $nj --cmd "$train_cmd" data/miami/train data/lang exp/mono  || exit 1
 fi
-# echo
-# echo "===== MONO DECODING ====="
-# echo
-#utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph || exit 1
-#steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/miami/test exp/mono/decode
+
 if [ $stage -le 7 ]; then
   echo
   echo "===== MONO ALIGNMENT ====="
@@ -259,40 +255,6 @@ if [ $stage -le 17 ]; then
   echo "===== Run TDNN (add GPUs) ====="
   echo
   local/chain/run_tdnn.sh
-fi
-
-if [ $stage -le 18 ]; then
-  echo
-  echo "===== Run RNN-LM TDNN ====="
-  echo
-  local/rnnlm/tuning/run_lstm_tdnn_a.sh
-  local/rnnlm/average_rnnlm.sh
-fi
-
-if [ $stage -le 19 ]; then
-  # Here we rescore the lattices generated at stage 17
-  rnnlm_dir=exp/rnnlm_lstm_tdnn_a_averaged
-  lang_dir=data/lang_chain
-  ngram_order=4
-
-  # TO-DO: set the directories below
-
-  for dset in test; do
-    echo
-    echo "===== Rescore TDNN-f Lattice and Output ====="
-    echo
-    data_dir=data/${dset}_hires
-    decoding_dir=exp/chain_cleaned/tdnnf_1a/decode_${dset}
-    suffix=$(basename $rnnlm_dir)
-    output_dir=${decoding_dir}_$suffix
-
-    rnnlm/lmrescore_pruned.sh \
-      --cmd "$decode_cmd --mem 32G" \
-      --weight 0.5 --max-ngram-order $ngram_order \
-      $lang_dir $rnnlm_dir \
-      $data_dir $decoding_dir \
-      $output_dir
-  done
 fi
 
 echo

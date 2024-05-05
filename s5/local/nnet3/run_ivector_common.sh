@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Modified by: apj2125
+
 set -e -o pipefail
 
 
@@ -7,10 +9,11 @@ set -e -o pipefail
 # be called by more scripts).  It contains the common feature preparation and iVector-related parts
 # of the script.  See those scripts for examples of usage.
 
-
+# Modified by: apj2125
 stage=7
 nj=8
 
+# Modified by: apj2125
 train_set=miami/train_cleaned   # you might set this to e.g. train.
 gmm=tri3_cleaned          # This specifies a GMM-dir from the features of the type you're training the system on;
                           # it should contain alignments for 'train_set'.
@@ -111,8 +114,7 @@ if [ $stage -le 6 ]; then
   mkdir -p exp/nnet3${nnet3_affix}/diag_ubm
   temp_data_root=exp/nnet3${nnet3_affix}/diag_ubm
 
-  # train a diagonal UBM using a subset of about a quarter of the data
-  # AJ:
+  # Modified by: apj2125
   num_utts_total=$(wc -l <data/${train_set}_sp_hires/utt2spk)
   num_utts=$[$num_utts_total/4]
   utils/data/subset_data_dir.sh data/${train_set}_sp_hires \
@@ -153,7 +155,7 @@ if [ $stage -le 8 ]; then
   # that's the data we extract the ivectors from, as it's still going to be
   # valid for the non-'max2' data, the utterance list is the same.
 
-  # AJ: skippins speed perturbed
+  # Modified by: apj2125
   ivectordir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
 
 
@@ -176,7 +178,7 @@ if [ $stage -le 8 ]; then
     ${temp_data_root}/${train_set}_sp_hires_max2 \
     exp/nnet3${nnet3_affix}/extractor $ivectordir
 
-    # AJ:
+  # Modified by: apj2125
   # Also extract iVectors for the test data, but in this case we don't need the speed
   # perturbation (sp) or small-segment concatenation (comb).
   for data in miami/test; do
