@@ -3,6 +3,8 @@
 # Copyright (C) 2022 Apple Inc. All Rights Reserved.
 #
 
+# From Chi & Bell 2022
+
 # this file takes all of the Miami data and turns it into splits
 import os
 import yaml

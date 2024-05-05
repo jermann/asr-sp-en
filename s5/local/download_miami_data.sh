@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Author: Chi & Bell, 2022
+
 #
 # For licensing see accompanying LICENSE file.
 # Copyright (C) 2022 Apple Inc. All Rights Reserved.

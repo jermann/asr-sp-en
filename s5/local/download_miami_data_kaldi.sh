@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Created by: Alexander Jermann
+
 # start by downloading their repository
 DIRECTORY="data/miami/BangorTalk"
 if [ ! -d "$DIRECTORY" ]; then

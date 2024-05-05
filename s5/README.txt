@@ -24,6 +24,14 @@ Required Tools:
 - Python3
   Pip
     - convertextract
+    - yaml
+    - json
+    - tqdm
+    - shutil
+    - numpy
+    - random
+    - pandas
+    - nltk
 
 To Run code:
 - run.sh: Run's training. Please note that this deletes files and re-starts a
@@ -50,3 +58,13 @@ Modified files
 
 Created files
 - local/append_mono.py : this file converts stereo wav files to mono wav files
+- local/arpabet_to_ipa.py : Phoneme mapping to convert ARPAbet to IPA
+- local/download_miami_data_kaldi.py
+- local/fix_lexicon.py
+- local/fix_utt2spk
+
+local/make_train_test.sh
+
+
+This file converts stereo wav files to mono wav files
+# Note: Please adjust the paths to the right location

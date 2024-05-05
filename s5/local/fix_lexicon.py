@@ -1,3 +1,6 @@
+# Author: apj2125
+# Description: This file deltes erraneous spaces.
+
 # Open the input file
 with open('lexicon.txt', 'r') as f:
     # Read all lines from the file

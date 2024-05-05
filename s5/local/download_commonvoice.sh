@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Created by: apj2125
+# Note: Need to have a Huggingface and Log-In to download
+
 # start by downloading commonvoice
 DIRECTORY="data/cv"
 if [ ! -d "$DIRECTORY" ]; then
