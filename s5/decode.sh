@@ -21,14 +21,16 @@ data=data/miami/test
 # Get current working directory
 cwd=$(pwd)
 
+# Remove Directories from previous runs
+rm -r exp/chain_cleaned_1d/tdnn1d_sp/decode_test
+rm -r exp/chain_cleaned_1d/tdnn1d_sp/decode_test_rescore
+
+
 echo
 echo "===== Starting Decoding ====="
 echo
 
-#steps/decode.sh --config conf/decode.config --nj $decode_nj --cmd "$decode_cmd" "$decode_graph" "$data" "$destination"
-
-
-steps/nnet3/decode.sh --num-threads 4 --nj $decode_nj --cmd "$decode_cmd" \
+steps/nnet3/decode.sh --num-threads 1 --nj $decode_nj --cmd "$decode_cmd" \
     --acwt 1.0 --post-decode-acwt 10.0 \
     --online-ivector-dir exp/nnet3_cleaned_1d/ivectors_miami/test_hires \
     --scoring-opts "--min-lmwt 5 " \
