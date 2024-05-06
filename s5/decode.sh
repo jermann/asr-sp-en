@@ -39,5 +39,5 @@ steps/lmrescore_const_arpa.sh --cmd "$decode_cmd" data/lang_refined data/lang_re
 
 echo
 echo "===== Decoding Done ====="
-echo "Result saved in: ${cwd}/${desitination}_rescore"
+echo "Result saved in: ${cwd}/${destination}_rescore"
 exit 0
