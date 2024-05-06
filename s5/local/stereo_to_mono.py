@@ -1,3 +1,7 @@
+# Author: apj2125
+# Description: This file converts stereo wav files to mono wav files
+# Note: Please adjust the paths to the right location
+
 import os
 import glob
 import subprocess

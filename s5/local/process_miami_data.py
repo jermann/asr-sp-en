@@ -3,6 +3,8 @@
 # Copyright (C) 2022 Apple Inc. All Rights Reserved.
 #
 
+# Author: Chi & Bell, 2022
+
 # This file processes the Miami dataset into CS and monolingual test sets
 import re
 import os

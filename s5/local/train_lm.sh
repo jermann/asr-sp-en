@@ -11,6 +11,8 @@
 # It will then get the source data from the pre-downloaded Cantab-Tedlium files
 # and the pre-prepared data/train text source.
 
+# Modified by: apj2125
+
 
 set -e
 stage=0

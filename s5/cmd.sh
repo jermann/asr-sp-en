@@ -5,6 +5,8 @@
 # (make sure your --num-jobs options are no more than
 # the number of cpus on your machine.
 
+# Modified by: apj2125
+
 # Run locally:
 export train_cmd=run.pl
 export decode_cmd=run.pl

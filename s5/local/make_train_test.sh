@@ -1,3 +1,5 @@
+# Author: apj2125
+
 # makes a dev set
 # utils/copy_data_dir.sh data/miami/bangortalk data/miami/bangortalk_full
 
