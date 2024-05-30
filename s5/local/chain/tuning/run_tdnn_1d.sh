@@ -78,7 +78,11 @@ train_data_dir=data/${train_set}_sp_hires
 lores_train_data_dir=data/${train_set}_sp
 train_ivector_dir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
 
+# Changes Made: apj2125
+trainer_input_model=# To-Do
 
+# Here just checking that files exist
+# AJ To-Do: change final.mdl to espeng.mdl
 for f in $gmm_dir/final.mdl $train_data_dir/feats.scp $train_ivector_dir/ivector_online.scp \
     $lores_train_data_dir/feats.scp $ali_dir/ali.1.gz $gmm_dir/final.mdl; do
   [ ! -f $f ] && echo "$0: expected file $f to exist" && exit 1
@@ -209,7 +213,8 @@ if [ $stage -le 18 ]; then
     --tree-dir $tree_dir \
     --lat-dir $lat_dir \
     --dir $dir \
-    --use-gpu=wait
+    --use-gpu=wait \
+    --trainer.input-model $trainer_input_model
 fi
 
 

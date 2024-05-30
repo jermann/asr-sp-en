@@ -23,3 +23,5 @@ rm shuffled_list shuffled_train shuffled_test
 # # splits non-training data into validation and testing
 # utils/subset_data_dir.sh --first data/${trans_type}_deveval 20 data/${dev_set}
 # utils/subset_data_dir.sh --last data/${trans_type}_deveval 20 data/${eval_set}
+
+utils/subset_data_dir.sh --utt-list shuffled_train data/miami/test_hires data/miami/test_hires_decode

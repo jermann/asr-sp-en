@@ -22,8 +22,8 @@ data=data/miami/test
 cwd=$(pwd)
 
 # Remove Directories from previous runs
-rm -r exp/chain_cleaned_1d/tdnn1d_sp/decode_test
-rm -r exp/chain_cleaned_1d/tdnn1d_sp/decode_test_rescore
+rm -rf exp/chain_cleaned_1d/tdnn1d_sp/decode_test
+rm -rf exp/chain_cleaned_1d/tdnn1d_sp/decode_test_rescore
 
 
 echo
