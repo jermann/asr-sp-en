@@ -79,7 +79,7 @@ lores_train_data_dir=data/${train_set}_sp
 train_ivector_dir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
 
 # Changes Made: apj2125
-trainer_input_model=#exp-pretrained/espeng.mdl
+trainer_input_model=exp-pretrained/espeng.mdl
 
 # Here just checking that files exist
 # AJ To-Do: change final.mdl to espeng.mdl
