@@ -8,7 +8,7 @@ set -e -o pipefail
 
 # First the options that are passed through to run_ivector_common.sh
 # (some of which are also used in this script directly).
-stage=0 # was 0 and then 6
+stage=18 # was 0 and then 6
 
 # Changes Made: apj2125
 nj=8
@@ -78,8 +78,32 @@ train_data_dir=data/${train_set}_sp_hires
 lores_train_data_dir=data/${train_set}_sp
 train_ivector_dir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
 
+
+
+# Changes for Pre-Train
 # Changes Made: apj2125
+
+# Classic Data
+train_data_dir=data/${train_set}_sp_hires
+train_ivector_dir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
+
+# Names
+gmm=tri3_cleaned
+nnet3_affix=_cleaned_1d
+train_set=train_cleaned
+tdnn_affix=1e # pre-train
+
+# Pre-train
 trainer_input_model=exp-pretrained/espeng.mdl
+tree_dir=exp-pretrained/chain${nnet3_affix}/tree_bi${tree_affix}
+lat_dir=exp-pretrained/chain${nnet3_affix}/${gmm}_${train_set}_sp_lats
+
+# New Location
+dir=exp/chain${nnet3_affix}/tdnn${tdnn_affix}_sp
+
+
+
+
 
 # Here just checking that files exist
 # AJ To-Do: change final.mdl to espeng.mdl
@@ -185,8 +209,12 @@ if [ $stage -le 18 ]; then
      /export/b0{5,6,7,8}/$USER/kaldi-data/egs/ami-$(date +'%m_%d_%H_%M')/s5/$dir/egs/storage $dir/egs/storage
   fi
 
+  echo
+  echo "===== Starting nnet3/chain/train.py ====="
+  echo
+
   # Modified by: apj2125
-  --stage $train_stage \
+ steps/nnet3/chain/train.py --stage $train_stage \
     --cmd "$decode_cmd" \
     --feat.online-ivector-dir $train_ivector_dir \
     --feat.cmvn-opts="--config=conf/online_cmvn.conf" \
@@ -217,6 +245,11 @@ if [ $stage -le 18 ]; then
     --trainer.input-model $trainer_input_model
 fi
 
+# train: own data
+# lang: own data
+# .mdl: tedlium
+# tree: tedlium pretrained_model
+# tdnn: own
 
 
 if [ $stage -le 19 ]; then
