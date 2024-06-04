@@ -91,7 +91,7 @@ train_ivector_dir=exp/nnet3${nnet3_affix}/ivectors_${train_set}_sp_hires
 gmm=tri3_cleaned
 nnet3_affix=_cleaned_1d
 train_set=train_cleaned
-tdnn_affix=1e # pre-train
+#tdnn_affix=1e # pre-train
 
 # Pre-train
 trainer_input_model=exp-pretrained/espeng.mdl
